@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSU VOICE AREA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&family=Raleway:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- ตัวแปรสี --- */
+        :root {
+            --primary-blue: #005FAC;
+            --primary-blue-dark: #004a8c;
+            --accent-blue: #007bff;
+            --slogan-gradient-start: #FFD700;
+            --slogan-gradient-mid: #FFA500;
+            --slogan-gradient-end: #FF6347;
+            --bg-gradient-start: #f0f2f5; 
+            --bg-gradient-end: #ffffff;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --button-text: #ffffff;
+        }
+
+        /* --- Global Reset & Body --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Kanit', sans-serif;
+            line-height: 1.7;
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+            color: var(--text-dark);
+            /* เราไม่จำเป็นต้องมี padding รอบนอกสำหรับเว็บจริง */
+        }
+
+        /* --- Main Container --- */
+        .container {
+            max-width: 900px;
+            margin: 20px auto; /* เพิ่มระยะห่างบน-ล่างเล็กน้อย */
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+        
+        /* --- Header --- */
+        .header {
+            text-align: center;
+            padding: 40px 40px 30px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+            color: white;
+        }
+        .main-title {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+        .slogan {
+            font-family: 'Raleway', 'Kanit', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 900;
+            font-style: normal;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, var(--slogan-gradient-start), var(--slogan-gradient-mid), var(--slogan-gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            text-shadow: 0 3px 8px rgba(0,0,0,0.4);
+        }
+
+        /* --- Content Area --- */
+        .content { padding: 30px 40px; }
+        .content-section { margin-bottom: 35px; }
+        .content-section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary-blue-dark);
+            border-bottom: 3px solid var(--accent-blue);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        /* --- Button Styling --- */
+        .button-group { display: flex; flex-wrap: wrap; gap: 15px; }
+        .button-group.vertical { flex-direction: column; align-items: flex-start; gap: 12px; }
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            font-family: 'Kanit', sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--button-text);
+            background: linear-gradient(90deg, var(--accent-blue), var(--primary-blue));
+            padding: 13px 26px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 95, 172, 0.25);
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 18px rgba(0, 95, 172, 0.35);
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-blue-dark));
+        }
+
+        /* --- Footer --- */
+        .footer {
+            text-align: center;
+            padding: 25px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            border-top: 1px solid #e9ecef;
+            margin-top: 20px;
+        }
+        
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .container { margin: 10px auto; border-radius: 12px; }
+            .header { padding: 30px 20px 25px; }
+            .main-title { font-size: 2.2rem; }
+            .slogan { font-size: 1.4rem; letter-spacing: 1.5px; }
+            .content { padding: 20px; }
+            .content-section h2 { font-size: 1.6rem; }
+            .button-group { flex-direction: column; width: 100%; }
+            .btn { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="main-title">RSU VOICE AREA</h1>
+            <p class="subtitle">CONSERVATORY OF MUSIC RANGSIT UNIVERSITY</p>
+            <p class="slogan">YOU ARE THE SOUND OF THE NEXT GENERATION</p>
+        </header>
+        <main class="content">
+            <section class="content-section">
+                <h2>Voice Faculty</h2>
+                <div class="button-group">
+                    <a href="#" class="btn">รายชื่อคณาจารย์ (Faculty List)</a>
+                </div>
+            </section>
+            <section class="content-section">
+                <h2>ข้อมูลหลักสูตรและคู่มือ</h2>
+                <div class="button-group">
+                    <a href="https://sites.google.com/view/rsuvoicearea/handbook" class="btn">Voice Student Handbook</a>
+                    <a href="#" class="btn">Curriculum RSU 36</a>
+                </div>
+            </section>
+            <section class="content-section">
+                <h2>Voice Area Calendar</h2>
+                <div class="button-group">
+                    <a href="https://sites.google.com/view/rsuvoicearea/calendar-2568-2569" class="btn">2568-2569</a>
+                    <a href="#" class="btn">2569-2570</a>
+                </div>
+            </section>
+            <section class="content-section">
+                <h2>Performance Class</h2>
+                <div class="button-group">
+                    <a href="https://sites.google.com/view/rsuvoicearea/performance-class-schedule" class="btn">Performance Class Schedule</a>
+                    <a href="https://script.google.com/macros/s/AKfycbyvt4GmkpT7kU1gykpDD35Oluvgs0WzMSy7SlUuVcFVynE7VID075Gp6cSKOGJj77z4/exec" class="btn">Performance Class Attendance</a>
+                </div>
+            </section>
+            <section class="content-section">
+                <h2>Jury</h2>
+                <div class="button-group">
+                    <a href="#" class="btn">1/68 Jury sign up form</a>
+                    <a href="#" class="btn">2/68 Jury sign up form</a>
+                </div>
+            </section>
+            <section class="content-section">
+                <h2>Junior/Senior Recital</h2>
+                <div class="button-group vertical">
+                    <a href="https://sites.google.com/view/rsuvoicearea/%E0%B8%82%E0%B8%AD%E0%B8%81%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%94-recital" class="btn">ข้อกำหนด</a>
+                    <a href="https://script.google.com/macros/s/AKfycbxkUh7-HUIwhvZ8Nk_QipgjHhmUT6FMne0NUZHDXoIGv0o_n_P66dr60dRJcb81u1D5/exec" class="btn">ระบบจองห้องซ้อมและแสดง</a>
+                    <a href="https://script.google.com/macros/s/AKfycbxl_pjd-HMHl_Auimc6OTncWu0OFDlLc-cgAOF-3ndHDdgXW7O7bUEvVsUFr-cJsbl5/exec" class="btn">แบบฟอร์มคำขอใช้อุปกรณ์</a>
+                    <a href="https://sites.google.com/view/rsuvoicearea/recital-rider-and-stage-plot" class="btn">Recital Rider and Stage plot</a>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>&copy; RSU Conservatory of Music, Rangsit University</p>
+        </footer>
+    </div>
+</body>
+</html>
