@@ -1,0 +1,187 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+  :root {
+    --primary-color: #0056b3;
+    --text-color: #333;
+    --bg-gray: #f9fbfd;
+  }
+
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Kanit', sans-serif;
+    background-color: transparent;
+    color: var(--text-color);
+  }
+
+  .profile-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+
+  /* === Header Section === */
+  .header-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    border-bottom: 1px solid #eee;
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+  }
+
+  .header-info h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    color: var(--primary-color);
+    line-height: 1.2;
+  }
+
+  .header-info h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0 0 15px 0;
+    color: #555;
+  }
+
+  .sec-badge {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  /* === Content Layout === */
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* แบ่งครึ่งซ้ายขวา */
+    gap: 40px;
+    padding: 40px;
+    align-items: start;
+  }
+
+  .bio-column h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .bio-text p {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    text-align: justify;
+  }
+
+  /* === Footer / Back Button === */
+  .footer-nav {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    background-color: #fafafa;
+  }
+
+  .back-btn {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .back-btn:hover { color: var(--primary-color); }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .content-grid {
+      grid-template-columns: 1fr;
+      padding: 20px;
+      gap: 30px;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+    }
+  }
+</style>
+
+<div class="profile-wrapper">
+
+  <div class="header-section">
+    <img src="https://drive.google.com/thumbnail?id=1nO4HSh-rntTdybMdimh6-V1y3wCYK2WL&sz=w1000" class="profile-pic">
+    
+    <div class="header-info">
+      <h1>อ. พิม-ณิศวรา พาทพุทธิพงศ์<br><span style="font-size:0.8em; color:#666;">Pim Nissawara Pataputthipong</span></h1>
+      <h2>Voice Faculty Member</h2>
+      <span class="sec-badge">Sec 63</span>
+    </div>
+  </div>
+
+  <div class="content-grid">
+    
+    <div class="bio-column">
+      <h3>ประวัติ</h3>
+      <div class="bio-text">
+        <p>
+          ณิศวรา เป็นนักร้องที่มีพรสวรรค์และมีความหลงใหลในดนตรีมาตั้งแต่วัยเยาว์ มีประสบการณ์ในด้านละครเวที (Musical Theater) และดนตรีแจ๊ส เณิศวราได้พัฒนาเทคนิคการร้องและสไตล์ที่เป็นเอกลักษณ์ โดยได้รับอิทธิพลจากนักร้องแจ๊สในดวงใจอย่าง Sarah Vaughan และ Stacey Kent
+        </p>
+        <p>
+          ณิศวราเริ่มต้นเส้นทางอาชีพตั้งแต่สมัยเป็นนักศึกษา โดยร่วมแสดงกับวง Rangsit University Jazz Orchestra ในเทศกาลดนตรีสำคัญต่างๆ อาทิ Thailand International Jazz Conference และ Crimson Room Jazz Festival
+        </p>
+        <p>
+         ณิศวราได้มีผลงานการแสดงในสถานที่แสดงดนตรีแจ๊สชั้นนำมากมาย เช่น Brown Sugar, Crimson Room และ Saxophone Pub
+        </p>
+      </div>
+    </div>
+
+    <div class="bio-column">
+      <h3>Biography</h3>
+      <div class="bio-text">
+        <p>
+          Pim Nissawara is a talented vocalist who has been passionate about Music since a very young age, with years of experience in Musical Theater and Jazz. Pim has developed a unique vocal and style influenced by her favorite jazz singers such as Sarah Vaughan and Stacey Kent.
+        </p>
+        <p>
+          Beginning her journey as a college student, she started to pave her way by performing with Rangsit University Jazz Orchestra at some well-known Festivals including Thailand International Jazz Conference and Crimson Room Jazz Festival. 
+        </p>
+        <p>
+          Since then, Pim has appeared on renowned platforms, including Brown Sugar, Crimson Room, and Saxophone Pub.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-nav">
+    <a href="https://sites.google.com/view/rsuvoicearea/faculty-list" class="back-btn">
+      ← Back to Faculty List
+    </a>
+  </div>
+
+</div>
