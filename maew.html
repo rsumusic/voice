@@ -1,0 +1,358 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+  :root {
+    --primary-color: #0056b3;
+    --text-color: #333;
+    --bg-color: #ffffff;
+    --section-bg: #f9fbfd;
+  }
+
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Kanit', sans-serif;
+    background-color: transparent;
+  }
+
+  .profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--bg-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+
+  /* --- HEADER SECTION (CENTERED STYLE) --- */
+  .header-top {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+    background: linear-gradient(to bottom, #f0f4f8, #ffffff);
+    position: relative;
+    border-bottom: 1px solid #eee;
+  }
+
+  .profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+  }
+
+  /* ชื่อไทย */
+  .profile-name-en {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0 0 5px 0;
+    line-height: 1.2;
+  }
+
+  /* ชื่ออังกฤษ */
+  .profile-name-th {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+  }
+
+  .role-text {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .sec-badge {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+
+  .contact-bar {
+    text-align: center;
+    padding: 12px;
+    background: #f8f9fa;
+    color: #666;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .contact-bar a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .contact-bar a:hover { color: var(--primary-color); }
+
+  /* --- BODY CONTENT (2 Columns) --- */
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px; 
+    padding: 40px 40px 20px 40px;
+  }
+
+  .col-th { 
+    border-right: 1px solid #eee; 
+    padding-right: 25px; 
+  }
+  .col-en { 
+    padding-left: 25px; 
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-top: 35px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #f0f0f0;
+  }
+  
+  .section-title:first-child { margin-top: 0; }
+
+  p {
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1.2em;
+    font-size: 1rem;
+    /* แก้ไขจาก justify เป็น left เพื่อแก้ปัญหาช่องว่างห่างเกินไป */
+    text-align: left; 
+  }
+
+  /* Lists */
+  ul.bio-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul.bio-list li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  ul.bio-list li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 1.2;
+  }
+
+  strong {
+    font-weight: 500;
+    color: #000;
+  }
+
+  /* --- TEACHING SECTION STYLE --- */
+  .teaching-wrapper {
+    padding: 20px 40px 40px 40px;
+    border-top: 1px solid #eee;
+    background-color: #fafafa;
+  }
+
+  .teaching-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+  }
+
+  .teaching-card {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--primary-color);
+    font-weight: 500;
+    color: var(--text-color);
+    transition: transform 0.2s;
+  }
+
+  .teaching-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .teaching-card span {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9em;
+    font-weight: 400;
+    color: #666;
+  }
+
+  .footer-action {
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-top: 1px solid #eee;
+  }
+
+  .back-btn {
+    padding: 12px 35px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  .back-btn:hover { background: var(--primary-color); color: white; }
+
+  /* Mobile Responsive */
+  @media (max-width: 900px) {
+    .content-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    .col-th { border-right: none; border-bottom: 1px solid #eee; padding-bottom: 40px; padding-right: 0; }
+    .col-en { padding-left: 0; }
+    .teaching-wrapper { padding: 20px; }
+  }
+</style>
+
+<div class="profile-container">
+  
+  <div class="header-top">
+    <img src="https://drive.google.com/thumbnail?id=13OP-FfyJqIX2a28FXoQT8G3t0YvJ45Ra&sz=w1000" class="profile-img">
+    
+    <h1 class="profile-name-en">อ. แมว–ปาริฉัตร อยู่ประเสริฐ</h1>
+    <h2 class="profile-name-th">Parichat Euprasert</h2>
+    
+    <div class="role-text">
+      Head of Voice Studies<br>
+    </div>
+
+    <div class="sec-badge">Sec 22</div>
+  </div>
+
+  <div class="contact-bar">
+    ✉️ <a href="mailto:parichatmaew@gmail.com">parichatmaew@gmail.com</a>
+  </div>
+
+  <div class="content-grid">
+    
+    <div class="col-th">
+      
+      <div class="section-title">ประวัติ</div>
+      <p>
+        อาจารย์ปาริฉัตร อยู่ประเสริฐ หัวหน้ากลุ่มวิชาขับร้อง วิทยาลัยดนตรี มหาวิทยาลัยรังสิต ผู้เชี่ยวชาญด้านการสอนขับร้องและดนตรีบำบัด มีประสบการณ์การทำงานที่หลากหลายทั้งในแวดวงครีเอทีฟโฆษณาและการบริหารงานศิลป์ เป็นผู้อยู่เบื้องหลังความสำเร็จของศิลปินนักร้อง และได้รับเชิญเป็นวิทยากรและกรรมการตัดสินการประกวดร้องเพลงรายการสำคัญอย่างต่อเนื่อง
+      </p>
+
+      <div class="section-title">การศึกษา</div>
+      <ul class="bio-list">
+        <li><strong>ปริญญาโท:</strong> สาขาการแสดงและการสอนดนตรี วิทยาลัยดนตรี มหาวิทยาลัยรังสิต</li>
+        <li><strong>Certificate:</strong> ดนตรีบำบัด (เกียรตินิยมอันดับหนึ่งเหรียญทอง) จาก Aims Community College สหรัฐอเมริกา</li>
+        <li><strong>ปริญญาตรี:</strong> ภาควิชาออกแบบอุตสาหกรรม คณะสถาปัตยกรรมศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย</li>
+      </ul>
+      
+      <p style="margin-bottom:10px;"><strong>ศึกษาการขับร้องกับ:</strong></p>
+      <ul class="bio-list">
+         <li>อ. อนุชิต นันทขว้าง</li>
+         <li>อ. ดุษฎี พนมยงค์ (ศิลปินแห่งชาติ)</li>
+         <li>Dr. Darlene Mueller</li>
+         <li>Dr. Melissa Malde</li>
+         <li>Dr. Kazuo Inoue</li>
+      </ul>
+
+      <div class="section-title">ประสบการณ์การทำงาน</div>
+      <ul class="bio-list">
+        <li><strong>2006 - ปัจจุบัน:</strong> อาจารย์ประจำกลุ่มวิชาขับร้อง วิทยาลัยดนตรี มหาวิทยาลัยรังสิต</li>
+        <li><strong>1999 - 2000:</strong> Creative Director บริษัท JSL</li>
+        <li><strong>1996 - 1998:</strong> Art Director บริษัท AdPlus ในเครือวัฏจักร จำกัด (มหาชน)</li>
+      </ul>
+
+      <div class="section-title">บทบาทและผลงานทางดนตรี</div>
+      <ul class="bio-list">
+        <li><strong>Vocal Coach:</strong> ผู้ช่วยฝึกซ้อมร้องเพลงละครเวที Beauty and the Beast, The Sound of Music, Lion King, Annie, Mulan และ Aladdin ร่วมบันทึกเสียงโดยกรมประชาสัมพันธ์</li>
+        <li><strong>Concert Coordination:</strong> ประสานงานและช่วยฝึกซ้อม Universiade 2007, Mahler’s Symphony No. 2 & No. 8, Carmina Burana, Symphony No.9 ร่วมกับ RBSO และ Siam Philharmonic</li>
+        <li><strong>Performance:</strong> ร่วมขับร้องประสานเสียงในพิธีเปิด 13th Asian Games (1998), คอนเสิร์ต David Foster และ Andrea Bocelli Live in Bangkok</li>
+      </ul>
+
+      <div class="section-title">วิทยากรและกรรมการตัดสิน</div>
+      <ul class="bio-list">
+         <li><strong>วิทยากร:</strong> โครงการ THACCA-Thailand Creative Culture Agency (Music Boost Camp) และ Enhancing Soft Skills with ‘MUSIC’ ใน Alpha Skills Summit 2025</li>
+         <li><strong>กรรมการตัดสิน:</strong> CULTURES OF CHINA: WATER CUBE CUP, ASEAN+3 Pop Singing Contest (เวียดนาม), YTMF (Yamaha), KPN Awards และการประกวดร้องเพลงพระราชนิพนธ์จัดโดยกรุงเทพมหานคร</li>
+      </ul>
+
+    </div>
+
+    <div class="col-en">
+      
+      <div class="section-title">Biography</div>
+      <p>
+        Parichat Euprasert, Head of Voice Studies at the Conservatory of Music, Rangsit University, specializes in Vocal Pedagogy and Music Therapy. With diverse experience in creative advertising and art direction, she has worked behind the scenes for numerous successful artists and regularly serves as a guest speaker and adjudicator for major singing competitions.
+      </p>
+
+      <div class="section-title">Education</div>
+      <ul class="bio-list">
+        <li><strong>Master of Music:</strong> Performance and Pedagogy, Conservatory of Music, Rangsit University</li>
+        <li><strong>Certificate:</strong> First Class Honor Presidential Medallion, Music Therapy Aims Community College, USA</li>
+        <li><strong>Bachelor's Degree:</strong> Industrial Design, Faculty of Architecture, Chulalongkorn University</li>
+      </ul>
+      
+      <p style="margin-bottom:10px;"><strong>Vocal Training with:</strong></p>
+      <ul class="bio-list">
+         <li>Anuchid Nanthakowa</li>
+         <li>Dusdi Banomyong (Thailand's National Artist)</li>
+         <li>Dr. Darlene Mueller</li>
+         <li>Dr. Melissa Malde</li>
+         <li>Dr. Kazuo Inoue</li>
+      </ul>
+
+      <div class="section-title">Professional Experience</div>
+      <ul class="bio-list">
+        <li><strong>2006 - Present:</strong> Voice Faculty, Conservatory of Music, Rangsit University</li>
+        <li><strong>1999 - 2000:</strong> Creative Director, JSL Company</li>
+        <li><strong>1996 - 1998:</strong> Art Director, AdPlus (Wattajak Public Co., Ltd.)</li>
+      </ul>
+
+      <div class="section-title">Musical Roles and Performances</div>
+      <ul class="bio-list">
+        <li><strong>Vocal Coach:</strong> Assistant Vocal Coach for musicals including Beauty and the Beast, The Sound of Music, Lion King, Annie, Mulan, and Aladdin, as well as recording projects for the Public Relations Department</li>
+        <li><strong>Concert Coordination:</strong> Coordinator and rehearsal assistant for Universiade 2007, Mahler’s Symphony No. 2 & No. 8, Carmina Burana, Symphony No.9 with RBSO and Siam Philharmonic</li>
+        <li><strong>Performance:</strong> Chorus member for the 13th Asian Games (1998), David Foster and Andrea Bocelli Live in Bangkok</li>
+      </ul>
+
+      <div class="section-title">Speaker & Adjudicator</div>
+      <ul class="bio-list">
+         <li><strong>Guest Speaker / Instructor:</strong> THACCA-Thailand Creative Culture Agency (Music Boost Camp) and "Enhancing Soft Skills with MUSIC" seminar by Alpha Skills Summit 2025</li>
+         <li><strong>Adjudicator:</strong> CULTURES OF CHINA: WATER CUBE CUP, ASEAN+3 Pop Singing Contest (Vietnam), YTMF (Yamaha), KPN Awards, and Royal Composition Singing Contest (Bangkok)</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div class="teaching-wrapper">
+    <div class="section-title">วิชาที่สอน (Teaching Areas)</div>
+    <div class="teaching-grid">
+      <div class="teaching-card">Applied Music (Voice)<span>วิชาดนตรีปฏิบัติ (ขับร้อง)</span></div>
+      <div class="teaching-card">Basic Voice<span>วิชาการขับร้องเบื้องต้น</span></div>
+      <div class="teaching-card">Diction I<span>วิชาการออกเสียง 1</span></div>
+    </div>
+  </div>
+
+  <div class="footer-action">
+    <a href="https://sites.google.com/view/rsuvoicearea/faculty-list" class="back-btn">← Back to Faculty List</a>
+  </div>
+
+</div>
