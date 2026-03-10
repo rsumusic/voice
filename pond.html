@@ -1,0 +1,201 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+  :root {
+    --primary-color: #0056b3;
+    --text-color: #333;
+    --bg-gray: #f9fbfd;
+  }
+
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Kanit', sans-serif;
+    background-color: transparent;
+    color: var(--text-color);
+  }
+
+  .profile-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+
+  /* === Header Section === */
+  .header-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    border-bottom: 1px solid #eee;
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+  }
+
+  .header-info h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    color: var(--primary-color);
+    line-height: 1.2;
+  }
+
+  .header-info h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0 0 15px 0;
+    color: #555;
+  }
+
+  .sec-badge {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  /* === Content Layout === */
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* แบ่งครึ่ง ไทย-อังกฤษ */
+    gap: 40px;
+    padding: 40px;
+  }
+
+  .bio-column h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+  }
+
+  .bio-text p {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    text-align: left; /* จัดชิดขอบซ้ายขวา */
+  }
+
+  /* === Footer / Back Button === */
+  .footer-nav {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    background-color: #fafafa;
+  }
+
+  .back-btn {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .back-btn:hover { color: var(--primary-color); }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .content-grid {
+      grid-template-columns: 1fr; /* มือถือเรียงลงมา */
+      padding: 20px;
+      gap: 30px;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+    }
+    .bio-column:first-child {
+        border-bottom: 1px dashed #ddd;
+        padding-bottom: 20px;
+    }
+  }
+</style>
+
+<div class="profile-wrapper">
+
+  <div class="header-section">
+    <img src="https://drive.google.com/thumbnail?id=1HZb43bFQ7ja_MUnqaRgopbQTCwT-yAXL&sz=w1000" class="profile-pic">
+    
+    <div class="header-info">
+      <h1>อ. ปอนด์-พัทธนันท์ อาจองค์<br><span style="font-size:0.8em; color:#666;">Pattanan Art-ong</span></h1>
+      <h2>Voice Faculty Member</h2>
+      <span class="sec-badge">Sec 72</span>
+    </div>
+  </div>
+
+  <div class="content-grid">
+    
+    <div class="bio-column">
+      <h3>ประวัติ</h3>
+      <div class="bio-text">
+        <p>
+          พัทธนันท์ อาจองค์ สำเร็จการศึกษาจากคณะศิลปกรรมศาสตร์ สาขาดุริยางคศิลป์ตะวันตก เอกการแสดงการขับร้อง ด้วยคะแนนเกียรตินิยมอันดับ 1 โดยศึกษากับ ศ.ดวงใจ ทิวทอง จากนั้นได้รับทุนความสามารถพิเศษด้านดนตรีในการศึกษาต่อที่วิทยาลัยดนตรี มหาวิทยาลัยรังสิต สาขาการแสดงดนตรี โดยได้ศึกษากับ ผศ.ดร. กิตตินันท์ ชิญสำราญตลอดจนจบการศึกษา
+        </p>
+        <p>
+          พัทธนันท์ได้เริ่มต้นการขับร้องเพลงคลาสสิกด้วยการเข้าร่วมกิจกรรมการขับร้องเพลงประสานเสียง โดยได้เข้าร่วมขับร้องกับคณะนักร้องประสานเสียงเยาวชนไทยตั้งแต่ปี พ.ศ.2550 - 2552 และตั้งแต่ปี พ.ศ. 2551 ก็ได้เข้าร่วมเป็นสมาชิกของวงขับร้องประสานเสียงแห่งจุฬาลงกรณ์มหาวิทยาลัย ภายใต้การอำนวยเพลงของ ดร.ภาวศุทธิ์ พิริยะพงษ์รัตน์ ซึ่งพัทธนันท์ได้รับเลือกให้ขับร้องเดี่ยวอยู่บ่อยครั้ง ได้แก่ Stravinsky’s Mass, Handel’s Messiah, Mozart’s Mass in C Minor, และ J.S. Bach’s Magnificat in D Major.
+        </p>
+        <p>
+          พัทธนันท์ได้มีโอกาสร่วมแสดงทั้งอุปรากร และละครเวที อาทิ Cavalli’s La Calisto, Mozart’s The Magic Flute (อำนวยการสร้างโดย Opera Siam), Cixi the Musical, และ Mozart’s The Marriage of Figaro (อำนวยการสร้างโดย วิทยาลัยดนตรี มหาวิทยาลัยรังสิต).
+        </p>
+        <p>
+          พัทธนันท์ได้ศึกษาเพิ่มเติมในด้านการร้องเพลงกับอาจารย์สุชีลา อังคไพโรจน์ นอกจากนี้ยังได้เข้าร่วมกิจกรรมมาสเตอร์คลาสต่างๆ กับนักร้องระดับนานาชาติอาทิเช่น Franz Lukasovky, Loh Siew Tuan และ Thomas Moser เป็นต้น ซึ่งในปี พ.ศ. 2555 ก็ได้รับทุนการศึกษาระยะสั้นจากสำนักงานคณะกรรมการอุดมศึกษาให้เข้าร่วมค่ายดนตรี The 22nd International Summer Academy (ISA) 2012 ที่ประเทศออสเตรีย ซึ่งจัดโดย University for Music and Performing Arts ณ กรุงเวียนนา
+        </p>
+        <p>
+          ปัจจุบันพัทธนันท์รับราชการในตำแหน่งคีตศิลปิน (นักร้อง) ประจำที่กองการสังคีต สำนักวัฒนธรรม กีฬา และการท่องเที่ยว กรุงเทพมหานคร และนอกจากนี้ยังเป็นอาจารย์พิเศษสอนวิชาขับร้อง วิทยาลัยดนตรี มหาวิทยาลัยรังสิต และสาขาวิชาดนตรีตะวันตก คณะมนุษยศาสตร์ มหาวิทยาลัยเกษตรศาสตร์
+        </p>
+      </div>
+    </div>
+
+    <div class="bio-column">
+      <h3>Biography</h3>
+      <div class="bio-text">
+        <p>
+          Pattanan Art-ong received her bachelor’s degree with First-Class Honors in Music Performance at the Faculty of Fine and Applied Arts, Chulalongkorn University, under the guidance of Professor Duangjai Thewtong. She later received a music talent scholarship to pursue further studies at the Conservatory of Music, Rangsit University, majoring in Music Performance, where she studied with Assistant Professor Dr. Kittinant Chinsamarn until completing her degree.
+        </p>
+        <p>
+          Pattanan began her classical singing journey through participation in choral activities. She was a member of the Thai Youth Choir from 2007 to 2009, and since 2008, she has been a member of the Chulalongkorn University Choir under the direction of Dr. Pawasut Piriyapongrat. During her time with the choir, Pattanan was selected as a soloist on several occasions for major choral works, including Stravinsky’s Mass, Handel’s Messiah, Mozart’s Mass in C Minor, and J.S. Bach’s Magnificat in D Major.
+        </p>
+        <p>
+          Her stage credits span both opera and musical theater, featuring roles in Cavalli’s La Calisto, Mozart’s The Magic Flute (produced by Opera Siam), Cixi the Musical, and Mozart’s The Marriage of Figaro (produced by Conservatory of Music Rangsit University).
+        </p>
+        <p>
+          Pattanan continued to further her vocal studies under the guidance of Susheilagh Angpiroj. She also participated in various masterclasses with internationally renowned singers such as Franz Lukasovsky, Loh Siew Tuan, and Thomas Moser, among others. In 2012, she was awarded a short-term scholarship from the Office of the Higher Education Commission of Thailand to attend The 22nd International Summer Academy (ISA) 2012 in Austria, organized by the University of Music and Performing Arts, Vienna.
+        </p>
+        <p>
+          At present, Pattanan holds the position of Singer at the Music Division, Office of Culture, Sports, and Tourism, Bangkok Metropolitan Administration. In addition, she is a part-time lecturer in Vocal Performance at the Conservatory of Music, Rangsit University, and in the Western Music Program, Faculty of Humanities, Kasetsart University.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-nav">
+    <a href="https://sites.google.com/view/rsuvoicearea/faculty-list" class="back-btn">
+      ← Back to Faculty List
+    </a>
+  </div>
+
+</div>
