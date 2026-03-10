@@ -1,144 +1,170 @@
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>อ. มิว-ณธายุ ศิริบรรจงศักดิ์ - RSU VOICE AREA</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
 
-  :root {
-    --primary-color: #0056b3;
-    --text-color: #333;
-    --bg-gray: #f9fbfd;
-  }
+    :root {
+      --primary-color: #0056b3;
+      --text-color: #333;
+      --bg-gray: #f9fbfd;
+    }
 
-  body {
-    margin: 0;
-    padding: 20px;
-    font-family: 'Kanit', sans-serif;
-    background-color: transparent;
-    color: var(--text-color);
-  }
+    body {
+      margin: 0;
+      padding: 15px;
+      font-family: 'Kanit', sans-serif;
+      background-color: #f5f7fa;
+      color: var(--text-color);
+    }
 
-  .profile-wrapper {
-    max-width: 900px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    overflow: hidden;
-  }
+    .profile-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
 
-  /* === Header Section === */
-  .header-section {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 40px;
-    background: linear-gradient(to right, #f8f9fa, #ffffff);
-    border-bottom: 1px solid #eee;
-  }
-
-  .profile-pic {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    flex-shrink: 0;
-  }
-
-  .header-info h1 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin: 0 0 5px 0;
-    color: var(--primary-color);
-    line-height: 1.2;
-  }
-
-  .header-info h2 {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin: 0 0 15px 0;
-    color: #555;
-  }
-
-  .sec-badge {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-
-  /* === Content Layout === */
-  .content-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* แบ่งครึ่งซ้ายขวา */
-    gap: 40px;
-    padding: 40px;
-    align-items: start;
-  }
-
-  .bio-column h3 {
-    font-size: 1.3rem;
-    color: var(--primary-color);
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
-
-  .bio-text p {
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-    font-weight: 300;
-    text-align: left;
-  }
-
-  /* === Footer / Back Button === */
-  .footer-nav {
-    padding: 20px;
-    text-align: center;
-    border-top: 1px solid #eee;
-    background-color: #fafafa;
-  }
-
-  .back-btn {
-    text-decoration: none;
-    color: #666;
-    font-weight: 500;
-    transition: color 0.2s;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-  }
-  .back-btn:hover { color: var(--primary-color); }
-
-  /* Responsive Design */
-  @media (max-width: 768px) {
+    /* === Header Section === */
     .header-section {
-      flex-direction: column;
-      text-align: center;
-      padding: 30px 20px;
-    }
-    .content-grid {
-      grid-template-columns: 1fr;
-      padding: 20px;
+      display: flex;
+      align-items: center;
       gap: 30px;
+      padding: 40px;
+      background: linear-gradient(to right, #f8f9fa, #ffffff);
+      border-bottom: 1px solid #eee;
     }
+
     .profile-pic {
-      width: 150px;
-      height: 150px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      flex-shrink: 0;
     }
-  }
-</style>
+
+    .header-info h1 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin: 0 0 5px 0;
+      color: var(--primary-color);
+      line-height: 1.2;
+    }
+
+    .header-info h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin: 0 0 15px 0;
+      color: #555;
+    }
+
+    .sec-badge {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* === Content Layout === */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding: 40px;
+      align-items: start;
+    }
+
+    .bio-column h3 {
+      font-size: 1.3rem;
+      color: var(--primary-color);
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .bio-text p {
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    /* === Footer / Back Button === */
+    .footer-nav {
+      padding: 25px;
+      text-align: center;
+      border-top: 1px solid #eee;
+      background-color: #fafafa;
+    }
+
+    .back-btn {
+      text-decoration: none;
+      color: #666;
+      font-weight: 500;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 8px 25px;
+      border: 1px solid #ddd;
+      border-radius: 50px;
+      background: white;
+      font-size: 0.9rem;
+    }
+
+    .back-btn:hover { 
+      color: var(--primary-color); 
+      border-color: var(--primary-color);
+      transform: translateY(-2px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      body { padding: 10px; }
+      
+      .header-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 20px;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+        gap: 30px;
+      }
+
+      .profile-pic {
+        width: 150px;
+        height: 150px;
+      }
+
+      .header-info h1 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
 
 <div class="profile-wrapper">
 
   <div class="header-section">
-    <img src="https://drive.google.com/thumbnail?id=167bGY_flzGVHO1nsnqTdhmCyWxyY-kj6&sz=w1000" class="profile-pic">
+    <img src="https://drive.google.com/thumbnail?id=167bGY_flzGVHO1nsnqTdhmCyWxyY-kj6&sz=w1000" class="profile-pic" alt="อ. มิว-ณธายุ ศิริบรรจงศักดิ์">
     
     <div class="header-info">
-      <h1>อ. มิว-ณธายุ ศิริบรรจงศักดิ์<br><span style="font-size:0.8em; color:#666;">Nathayu Siribunjongsak</span></h1>
+      <h1>อ. มิว-ณธายุ ศิริบรรจงศักดิ์<br><span style="font-size:0.8em; color:#666; font-weight: 400;">Nathayu Siribunjongsak</span></h1>
       <h2>Voice Faculty Member</h2>
       <span class="sec-badge">Sec 69</span>
     </div>
@@ -150,19 +176,16 @@
       <h3>ประวัติ</h3>
       <div class="bio-text">
         <p>
-          ณธายุ ศิริบรรจงศักดิ์ เริ่มต้นเส้นทางดนตรีด้วยการเรียนเปียโนและทฤษฎีดนตรีกับอาจารย์ศรุดา มีศรี และเริ่มศึกษาด้านการขับร้องเมื่ออายุ 17 ปี กับอาจารย์อชิรญาณ์ ศุภลักษณ์นารี ณ สถาบันดนตรีเคพีเอ็น สาขาแฟชั่นไอส์แลนด์
+          ณธายุ ศิริบรรจงศักดิ์ เริ่มต้นเส้นทางดนตรีด้วยการเรียนเปียโนและทฤษฎีดนตรีกับอาจารย์ศรุดา มีศรี และเริ่มศึกษาด้านการขับร้องเมื่ออายุ 17 ปี กับอาจารย์อชิรญาณ์ ศุภลักษณ์นารี
         </p>
         <p>
-          ในปี 2016 ได้เข้าศึกษาต่อที่วิทยาลัยดนตรี มหาวิทยาลัยรังสิต โดยศึกษาวิชาเอกขับร้องกับคณาจารย์ ได้แก่ ดร.กิตตินันท์ ชินสำราญ, อาจารย์พัทธนันท์ อาจองค์ และอาจารย์ปาริฉัตร อยู่ประเสริฐ ระหว่างการศึกษา ณธายุเป็นสมาชิกวง RSU Concert Singers (ควบคุมวงโดย ดร.ดลหทัย อินทวงศ์) ซึ่งได้รับรางวัลชนะเลิศอันดับ 1 เหรียญทอง ประเภท Gospel & Spiritual จากการแข่งขัน 1st Lanna International Choir Competition 2016
+          ในปี 2016 ได้เข้าศึกษาต่อที่วิทยาลัยดนตรี มหาวิทยาลัยรังสิต โดยศึกษาวิชาเอกขับร้องกับ ดร.กิตตินันท์ ชินสำราญ, อาจารย์พัทธนันท์ อาจองค์ และอาจารย์ปาริฉัตร อยู่ประเสริฐ ระหว่างการศึกษาเป็นสมาชิกวง RSU Concert Singers ซึ่งได้รับรางวัลชนะเลิศอันดับ 1 เหรียญทอง จากการแข่งขัน Lanna International Choir Competition 2016
         </p>
         <p>
-          ณธายุมีประสบการณ์การแสดงร่วมกับวงออร์เคสตราต่างๆ อาทิ Royal Bangkok Symphony Orchestra (RBSO), RSU Symphony Orchestra, วงดุริยางค์สากลกรมศิลปากร (ควบคุมวงโดย ดร.วานิช โปตะวณิช) และวงซิมโฟนีออร์เคสตราแห่งจุฬาลงกรณ์มหาวิทยาลัย (ควบคุมวงโดย รศ.ดร. นรอรรถ จันทร์กล่ำ) นอกจากนี้ยังมีผลงานละครเวทีเรื่อง "แกะดำโลกสวย เดอะมิวสิคัล" (2018) และเข้าร่วมเทศกาลขับร้องประสานเสียงจุฬาฯ (2017-2019) โดยได้รับการอบรมความรู้ด้านทักษะการขับร้องประสานเสียงจาก Professor Timothy Brown, Dr. Jo-Michael Scheibe และ Dr. Rollo Dilworth
+          มิวมีประสบการณ์การแสดงร่วมกับวงออร์เคสตราต่างๆ อาทิ RBSO, RSU Symphony Orchestra และวงดุริยางค์สากลกรมศิลปากร นอกจากนี้ยังมีผลงานละครเวทีเรื่อง "แกะดำโลกสวย เดอะมิวสิคัล" (2018) และได้รับการอบรมทักษะจากผู้เชี่ยวชาญระดับโลกอาทิ Professor Timothy Brown และ Dr. Rollo Dilworth
         </p>
         <p>
-          ณธายุได้เข้าร่วมสัมมนาเพื่อพัฒนาศักยภาพครูดนตรี ด้านการอำนวยเพลงจาก ดร.วานิช โปตะวณิช, ด้านเทคนิคการขับร้องจากอาจารย์ปาริฉัตร อยู่ประเสริฐ, สไตล์เพลงแจ๊สจาก รศ.ดร.เด่น อยู่ประเสริฐ และเทคนิคการแสดงจากอาจารย์ชนัตถ์ พงษ์พานิช
-        </p>
-        <p>
-          <strong>ปัจจุบัน</strong> ณธายุกำลังศึกษาระดับปริญญาโท แขนงวิชาการแสดงดนตรีและการสอน ณ วิทยาลัยดนตรี มหาวิทยาลัยรังสิต และดำรงตำแหน่งอาจารย์พิเศษวิชาดนตรีปฏิบัติ (ขับร้อง) ที่วิทยาลัยดนตรี มหาวิทยาลัยรังสิต
+          <strong>ปัจจุบัน</strong> ณธายุกำลังศึกษาระดับปริญญาโท แขนงวิชาการแสดงดนตรีและการสอน และดำรงตำแหน่งอาจารย์พิเศษวิชาดนตรีปฏิบัติ (ขับร้อง) ณ วิทยาลัยดนตรี มหาวิทยาลัยรังสิต
         </p>
       </div>
     </div>
@@ -171,16 +194,16 @@
       <h3>Biography</h3>
       <div class="bio-text">
         <p>
-          Nathayu Siribunjongsak began her musical journey with piano and music theory studies under Saruda Meesri before focusing on vocal studies at the age of 17 with Achiraya Supaluknaree at KPN Music Academy.
+          Nathayu Siribunjongsak began her musical journey with piano and music theory before focusing on vocal studies at the age of 17 at KPN Music Academy.
         </p>
         <p>
-          She pursued her Bachelor of Music at the Conservatory of Music, Rangsit University (2016), studying under instructors including Dr. Kittinant Chinsamran, Pattanan Art-ong, and Parichat Euprasert. As a member of the RSU Concert Singers under the direction of Dr. Dolhathai Intawong, she won the Gold Medal (First Prize) in the Gospel & Spiritual category at the 1st Lanna International Choir Competition 2016.
+          She pursued her Bachelor of Music at Rangsit University, studying under Dr. Kittinant Chinsamran, Pattanan Art-ong, and Parichat Euprasert. As a member of RSU Concert Singers, she won the Gold Medal at the 1st Lanna International Choir Competition 2016.
         </p>
         <p>
-          Nathayu has performance experience collaborating with orchestras such as the Royal Bangkok Symphony Orchestra (RBSO), RSU Symphony Orchestra, The Fine Arts Department Orchestra, and the CU Symphony Orchestra. She also performed in the musical "Black Sheep" (2018) and participated in the Chulalongkorn University Choral Festival (2017-2019), receiving choral training from Professor Timothy Brown, Dr. Jo-Michael Scheibe, and Dr. Rollo Dilworth.
+          Nathayu has performed with major orchestras including the RBSO and the Fine Arts Department Orchestra. She also performed in the musical "Black Sheep" (2018) and received choral training from renowned conductors such as Professor Timothy Brown and Dr. Rollo Dilworth.
         </p>
         <p>
-          <strong>Currently</strong>, Nathayu is pursuing her Master of Music in Performance and Pedagogy at Rangsit University and serves as an adjunct voice faculty member at the Conservatory of Music, Rangsit University.
+          <strong>Currently</strong>, Nathayu is pursuing her Master of Music in Performance and Pedagogy and serves as an adjunct voice faculty member at the Conservatory of Music, Rangsit University.
         </p>
       </div>
     </div>
@@ -188,9 +211,12 @@
   </div>
 
   <div class="footer-nav">
-    <a href="https://sites.google.com/view/rsuvoicearea/faculty-list" class="back-btn">
+    <a href="faculty.html" class="back-btn">
       ← Back to Faculty List
     </a>
   </div>
 
 </div>
+
+</body>
+</html>
