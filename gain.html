@@ -1,0 +1,218 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+  :root {
+    --primary-color: #0056b3;
+    --text-color: #333;
+    --bg-gray: #f9fbfd;
+  }
+
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Kanit', sans-serif;
+    background-color: transparent;
+    color: var(--text-color);
+  }
+
+  .profile-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+
+  /* === Header Section === */
+  .header-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    border-bottom: 1px solid #eee;
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+  }
+
+  .header-info h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    color: var(--primary-color);
+    line-height: 1.2;
+  }
+
+  .header-info h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0 0 15px 0;
+    color: #555;
+  }
+
+  .sec-badge {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  /* === Content Layout === */
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* แบ่งครึ่งซ้ายขวา */
+    gap: 40px;
+    padding: 40px;
+    align-items: start;
+  }
+
+  .bio-column h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  /* List Styling */
+  .bio-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .bio-list li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .bio-list li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+
+  /* === Footer / Back Button === */
+  .footer-nav {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    background-color: #fafafa;
+  }
+
+  .back-btn {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .back-btn:hover { color: var(--primary-color); }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .content-grid {
+      grid-template-columns: 1fr;
+      padding: 20px;
+      gap: 30px;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+    }
+  }
+</style>
+
+<div class="profile-wrapper">
+
+  <div class="header-section">
+    <img src="https://drive.google.com/thumbnail?id=1mLY5OozjAiec0AKC2V1AikCfv8T4OWnk&sz=w1000" class="profile-pic">
+    
+    <div class="header-info">
+      <h1>อ. เกน-วรัท บุญวรานันฐ์<br><span style="font-size:0.8em; color:#666;">Warat Boonwaranan</span></h1>
+      <h2>Voice Faculty Member</h2>
+      <span class="sec-badge">Sec 65</span>
+    </div>
+  </div>
+
+  <div class="content-grid">
+    
+    <div class="bio-column">
+      <h3>การศึกษา</h3>
+      <ul class="bio-list">
+        <li><strong>ดศ.ม. เทคโนโลยีดนตรีสร้างสรรค์</strong>, มหาวิทยาลัยราชภัฏจันทรเกษม (กำลังศึกษา)</li>
+        <li><strong>ด.บ. การแสดงขับร้อง</strong>, วิทยาลัยดนตรี มหาวิทยาลัยรังสิต (2557)</li>
+      </ul>
+      
+      <br>
+
+      <h3>ประสบการณ์และผลงาน</h3>
+      <ul class="bio-list">
+        <li>ศึกษาการขับร้องเพลงคลาสสิกกับ ผศ.ดร.กิตตินันท์ ชินสำราญ และการขับร้องเพลงแจ๊สกับ อ.เสาวนิตย์ นวพันธ์, อ.ปาริฉัตร อยู่ประเสริฐ และ Michael Parks Masterson</li>
+        <li>ผ่านการอบรมโครงการ YES Academy Thailand ด้านการแสดงละครเพลง ภายใต้การกำกับของ Dr.Paul Meers และ Gabriel Barre</li>
+        <li>ร่วมแสดงกับวงดนตรีและคณะประสานเสียงระดับประเทศ อาทิ Royal Bangkok Symphony Orchestra, Thailand Philharmonic Orchestra, Siam Opera/Siam Philharmonic Orchestra และ Chulalongkorn University Concert Choir</li>
+        <li>มีประสบการณ์เป็นนักร้องบันทึกเสียง นักร้องแบ็กอัพ ในงานอัลบั้ม คอนเสิร์ต และรายการโทรทัศน์ระดับประเทศ</li>
+        <li>ร่วมขับร้องประสานเสียงกับศิลปินระดับโลก Andrea Bocelli</li>
+        <li>ผู้ก่อตั้งวงดนตรีแนวป๊อป <strong>Karava</strong> ซึ่งมีผลงานติดชาร์ตคลื่น Fat Radio และเข้าร่วมเทศกาลดนตรีสำคัญหลายเวที</li>
+        <li>มีประสบการณ์ด้านการสอนร้องเพลงในสถาบันดนตรีชั้นนำ รวมถึงเป็นวิทยากรอบรมการขับร้องให้แก่สถานศึกษา</li>
+        <li><strong>ปัจจุบัน</strong> เปิดสตูดิโอสอนร้องเพลงส่วนตัว เป็นนักร้อง นักดนตรี และนักแต่งเพลงอิสระ</li>
+      </ul>
+    </div>
+
+    <div class="bio-column">
+      <h3>Education</h3>
+      <ul class="bio-list">
+        <li><strong>Master of Music</strong> (Creative Music Technology), Chandrakasem Rajabhat University (Candidate)</li>
+        <li><strong>Bachelor of Music</strong> (Vocal Performance), Rangsit University (2014)</li>
+      </ul>
+
+      <br>
+
+      <h3>Experience & Highlights</h3>
+      <ul class="bio-list">
+        <li>Studied Classical Voice with Asst. Prof. Dr. Kittinant Chinsamarn; studied Jazz Voice with Saowanit Navapan, Parichat Yuprasert, and Michael Parks Masterson.</li>
+        <li>Participated in <strong>YES Academy Thailand</strong> (Musical Theatre) directed by Dr. Paul Meers and Gabriel Barre.</li>
+        <li>Performed with major ensembles such as the Royal Bangkok Symphony Orchestra (RBSO), Thailand Philharmonic Orchestra (TPO), Siam Opera/Siam Philharmonic Orchestra, and Chulalongkorn University Concert Choir.</li>
+        <li>Extensive experience as a session singer and backup singer for albums, concerts, and national television programs.</li>
+        <li>Performed as a backup choir member for <strong>Andrea Bocelli</strong>.</li>
+        <li>Founder of the pop band <strong>Karava</strong>, which charted on Fat Radio and performed at major music festivals.</li>
+        <li>Voice instructor at leading music institutions and guest lecturer for educational organizations.</li>
+        <li><strong>Currently</strong> runs a private voice studio and works as a freelance singer, musician, and songwriter.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-nav">
+    <a href="https://sites.google.com/view/rsuvoicearea/faculty-list" class="back-btn">
+      ← Back to Faculty List
+    </a>
+  </div>
+
+</div>
