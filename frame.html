@@ -1,0 +1,233 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+  :root {
+    --primary-color: #0056b3;
+    --text-color: #333;
+    --bg-gray: #f9fbfd;
+  }
+
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Kanit', sans-serif;
+    background-color: transparent;
+    color: var(--text-color);
+  }
+
+  .profile-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+
+  /* === Header Section === */
+  .header-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    border-bottom: 1px solid #eee;
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+  }
+
+  .header-info h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    color: var(--primary-color);
+    line-height: 1.2;
+  }
+
+  .header-info h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0 0 15px 0;
+    color: #555;
+  }
+
+  .sec-badge {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  /* === Content Layout === */
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* แบ่งครึ่งซ้ายขวา */
+    gap: 40px;
+    padding: 40px;
+    align-items: start;
+  }
+
+  .bio-column h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .bio-text p {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    text-align: justify;
+  }
+
+  /* List Styling within Bio */
+  .bio-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+
+  .bio-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .bio-list li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+
+  /* === Footer / Back Button === */
+  .footer-nav {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    background-color: #fafafa;
+  }
+
+  .back-btn {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .back-btn:hover { color: var(--primary-color); }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .content-grid {
+      grid-template-columns: 1fr;
+      padding: 20px;
+      gap: 30px;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+    }
+  }
+</style>
+
+<div class="profile-wrapper">
+
+  <div class="header-section">
+    <img src="https://drive.google.com/thumbnail?id=13thLDXRlLDk4_VDCCOaOCPV9Tu-Mdmsl&sz=w1000" class="profile-pic">
+    
+    <div class="header-info">
+      <h1>อ. เฟรม-พงษ์พิษณุ พงษ์พยอม<br><span style="font-size:0.8em; color:#666;">Pongpithsanu Pongpayom</span></h1>
+      <h2>Voice Faculty Member</h2>
+      <span class="sec-badge">Sec 67</span>
+    </div>
+  </div>
+
+  <div class="content-grid">
+    
+    <div class="bio-column">
+      <h3>ประวัติการศึกษาและการทำงาน</h3>
+      <div class="bio-text">
+        <p>
+          พงษ์พิษณุ พงษ์พยอม สำเร็จการศึกษาระดับปริญญาตรี สาขาการแสดงขับร้อง (Vocal Performance) จากวิทยาลัยดนตรี มหาวิทยาลัยรังสิต
+        </p>
+        <p>
+          <strong>ปัจจุบัน:</strong>
+        </p>
+        <ul class="bio-list">
+            <li>อาจารย์พิเศษวิชาขับร้อง (Adjunct Lecturer of Voice) ที่มหาวิทยาลัยรังสิต</li>
+            <li>ครูสอนร้องเพลงระดับ Master (Master Voice Teacher) ที่สถาบัน MelodyPlus Music School (ตั้งแต่ปี 2017)</li>
+            <li>Vocal Coach อิสระให้กับบริษัท Be On Cloud Co., Ltd.</li>
+        </ul>
+      </div>
+
+      <h3>ประสบการณ์และผลงานโดดเด่น</h3>
+      <ul class="bio-list">
+        <li><strong>Vocal Coach:</strong> ให้กับศิลปินวง BUS (ในคอนเสิร์ต Happy BUSDAY The Sophomore และ BUS because of you I shine the 1st concert), งาน BeOnCloud X’mas & New Year Party, ซีรีส์ Shine The Series และ 4 Minutes The Last Seduction</li>
+        <li><strong>Vocal Director:</strong> ดูแลการร้องในเพลง "ปล่อยให้ฉันร้องไห้" และ "โตกว่านี้" (ศิลปิน GoodMood), เพลง "ตลอดกาล" (ศิลปิน Dena Euprasert) และร่วมเป็น Guest ใน Build presents The Gleam Concert</li>
+        <li><strong>กรรมการตัดสิน (Judge):</strong> การประกวดขับร้อง Thailand International Music Competition (2025) และการประกวดขับร้องเพลงพระราชนิพนธ์ มหามกุฏมงคลราชวิทยาลัย</li>
+        <li><strong>รางวัล:</strong> The Greatest Instructors จากงาน M-Fest2 (Melodyplus) และรางวัลจากการประกวด The Tech Melody</li>
+        <li><strong>การแสดง:</strong> ร่วมแสดงละครเวทีเรื่อง "The Legend of Phoenix", "หลงทางที่บางพลัด", "ม่านประเพณีประกาศิตอาญาสวรรค์" และร่วมขับร้องประสานเสียงในงาน Sirivannavari Spring & Summer</li>
+      </ul>
+    </div>
+
+    <div class="bio-column">
+      <h3>Education & Career</h3>
+      <div class="bio-text">
+        <p>
+          Pongpithsanu Pongpayom holds a Bachelor of Music degree in Vocal Performance from the Conservatory of Music, Rangsit University.
+        </p>
+        <p>
+          <strong>Current Positions:</strong>
+        </p>
+        <ul class="bio-list">
+            <li>Adjunct Lecturer of Voice at Rangsit University.</li>
+            <li>Master Voice Teacher at MelodyPlus Music School (since 2017).</li>
+            <li>Freelance Vocal Coach for Be On Cloud Co., Ltd.</li>
+        </ul>
+      </div>
+
+      <h3>Experience & Achievements</h3>
+      <ul class="bio-list">
+        <li><strong>Vocal Coach:</strong> Worked with the group <strong>BUS</strong> (Happy BUSDAY The Sophomore, 1st Concert), BeOnCloud X’mas & New Year Party events, <em>Shine The Series</em>, and <em>4 Minutes The Last Seduction</em>.</li>
+        <li><strong>Vocal Director:</strong> Directed vocals for GoodMood ("Ploi Hai Chan Rong Hai", "Lok Kwa Ni"), Dena Euprasert ("Talod Kal"), and appeared as a guest in "Build presents The Gleam Concert".</li>
+        <li><strong>Adjudicator:</strong> Judge for the Thailand International Music Competition (2025) and the Royal Anthem Singing Competition at Mahamakut Buddhist University.</li>
+        <li><strong>Awards:</strong> "The Greatest Instructors" at M-Fest2 (Melodyplus) and winner at "The Tech Melody" competition.</li>
+        <li><strong>Performance:</strong> Performed in musicals such as "The Legend of Phoenix", "Long Tang Tee Bang Phlat", and "Marn Prapheni". Performed in the chorus for the Sirivannavari Spring & Summer fashion show.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-nav">
+    <a href="https://sites.google.com/view/rsuvoicearea/faculty-list" class="back-btn">
+      ← Back to Faculty List
+    </a>
+  </div>
+
+</div>
