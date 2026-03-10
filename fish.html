@@ -1,181 +1,218 @@
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>อ. ฟิช-กฤตธัช พิสุทธิวงษ์ - RSU VOICE AREA</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
 
-  :root {
-    --primary-color: #0056b3;
-    --text-color: #333;
-    --bg-gray: #f9fbfd;
-  }
+    :root {
+      --primary-color: #0056b3;
+      --text-color: #333;
+      --bg-gray: #f9fbfd;
+    }
 
-  body {
-    margin: 0;
-    padding: 20px;
-    font-family: 'Kanit', sans-serif;
-    background-color: transparent;
-    color: var(--text-color);
-  }
+    body {
+      margin: 0;
+      padding: 15px; /* ปรับให้พอดีหน้าจอมือถือ */
+      font-family: 'Kanit', sans-serif;
+      background-color: #f5f7fa;
+      color: var(--text-color);
+    }
 
-  .profile-wrapper {
-    max-width: 900px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    overflow: hidden;
-  }
+    .profile-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
 
-  /* === Header Section === */
-  .header-section {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 40px;
-    background: linear-gradient(to right, #f8f9fa, #ffffff);
-    border-bottom: 1px solid #eee;
-  }
-
-  .profile-pic {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    flex-shrink: 0;
-  }
-
-  .header-info h1 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin: 0 0 5px 0;
-    color: var(--primary-color);
-    line-height: 1.2;
-  }
-
-  .header-info h2 {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin: 0 0 15px 0;
-    color: #555;
-  }
-
-  .sec-badge {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-
-  /* === Content Layout === */
-  .content-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* แบ่งครึ่งซ้ายขวา */
-    gap: 40px;
-    padding: 40px;
-    align-items: start;
-  }
-
-  .bio-column h3 {
-    font-size: 1.3rem;
-    color: var(--primary-color);
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
-
-  /* List Styling */
-  .bio-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .bio-list li {
-    margin-bottom: 12px;
-    position: relative;
-    padding-left: 20px;
-    font-weight: 300;
-    line-height: 1.5;
-  }
-
-  .bio-list li::before {
-    content: "•";
-    color: var(--primary-color);
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-  }
-
-  .role-group {
-    margin-bottom: 20px;
-  }
-  
-  .org-name {
-    font-weight: 500;
-    color: #444;
-    margin-bottom: 5px;
-    display: block;
-  }
-
-  .sub-list {
-    list-style: none;
-    padding-left: 15px;
-    margin-top: 5px;
-    font-size: 0.95em;
-    color: #666;
-  }
-  
-  .sub-list li::before { content: "-"; margin-right: 5px; color: #999; }
-
-  /* === Footer / Back Button === */
-  .footer-nav {
-    padding: 20px;
-    text-align: center;
-    border-top: 1px solid #eee;
-    background-color: #fafafa;
-  }
-
-  .back-btn {
-    text-decoration: none;
-    color: #666;
-    font-weight: 500;
-    transition: color 0.2s;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-  }
-  .back-btn:hover { color: var(--primary-color); }
-
-  /* Responsive Design */
-  @media (max-width: 768px) {
+    /* === Header Section === */
     .header-section {
-      flex-direction: column;
-      text-align: center;
-      padding: 30px 20px;
-    }
-    .content-grid {
-      grid-template-columns: 1fr;
-      padding: 20px;
+      display: flex;
+      align-items: center;
       gap: 30px;
+      padding: 40px;
+      background: linear-gradient(to right, #f8f9fa, #ffffff);
+      border-bottom: 1px solid #eee;
     }
+
     .profile-pic {
-      width: 150px;
-      height: 150px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      flex-shrink: 0;
     }
-  }
-</style>
+
+    .header-info h1 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin: 0 0 5px 0;
+      color: var(--primary-color);
+      line-height: 1.2;
+    }
+
+    .header-info h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin: 0 0 15px 0;
+      color: #555;
+    }
+
+    .sec-badge {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* === Content Layout === */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* แบ่งครึ่งซ้ายขวาในหน้าจอคอม */
+      gap: 40px;
+      padding: 40px;
+      align-items: start;
+    }
+
+    .bio-column h3 {
+      font-size: 1.3rem;
+      color: var(--primary-color);
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    /* List Styling */
+    .bio-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .bio-list li {
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 20px;
+      font-weight: 300;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    .bio-list li::before {
+      content: "•";
+      color: var(--primary-color);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .role-group {
+      margin-bottom: 20px;
+    }
+    
+    .org-name {
+      font-weight: 500;
+      color: #444;
+      margin-bottom: 5px;
+      display: block;
+      font-size: 1rem;
+    }
+
+    .sub-list {
+      list-style: none;
+      padding-left: 15px;
+      margin-top: 5px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    
+    .sub-list li {
+      margin-bottom: 5px;
+      line-height: 1.4;
+    }
+    
+    .sub-list li::before { 
+      content: "-"; 
+      margin-right: 8px; 
+      color: #999; 
+    }
+
+    /* === Footer / Back Button === */
+    .footer-nav {
+      padding: 25px;
+      text-align: center;
+      border-top: 1px solid #eee;
+      background-color: #fafafa;
+    }
+
+    .back-btn {
+      text-decoration: none;
+      color: #666;
+      font-weight: 500;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 8px 20px;
+      border: 1px solid #ddd;
+      border-radius: 50px;
+      background: white;
+      font-size: 0.9rem;
+    }
+
+    .back-btn:hover { 
+      color: var(--primary-color); 
+      border-color: var(--primary-color);
+      transform: translateY(-2px);
+    }
+
+    /* === Responsive Design (หน้าจอมือถือ) === */
+    @media (max-width: 768px) {
+      body { padding: 10px; }
+      
+      .header-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 20px;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr; /* ปรับเป็นคอลัมน์เดียวในมือถือ */
+        padding: 30px 20px;
+        gap: 30px;
+      }
+
+      .profile-pic {
+        width: 150px;
+        height: 150px;
+      }
+
+      .header-info h1 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
 
 <div class="profile-wrapper">
 
   <div class="header-section">
-    <img src="https://drive.google.com/thumbnail?id=1mrzYEYZ2iDcLugBFh3ZmUlZLe90uFURc&sz=w1000" class="profile-pic">
+    <img src="https://drive.google.com/thumbnail?id=1mrzYEYZ2iDcLugBFh3ZmUlZLe90uFURc&sz=w1000" class="profile-pic" alt="อ. ฟิช-กฤตธัช">
     
     <div class="header-info">
-      <h1>อ. ฟิช-กฤตธัช พิสุทธิวงษ์<br><span style="font-size:0.8em; color:#666;">Krittathad Pisuttiwong</span></h1>
+      <h1>อ. ฟิช-กฤตธัช พิสุทธิวงษ์<br><span style="font-size:0.8em; color:#666; font-weight: 400;">Krittathad Pisuttiwong</span></h1>
       <h2>Voice Faculty Member</h2>
       <span class="sec-badge">Sec 71</span>
     </div>
@@ -264,9 +301,12 @@
   </div>
 
   <div class="footer-nav">
-    <a href="https://sites.google.com/view/rsuvoicearea/faculty-list" class="back-btn">
+    <a href="faculty.html" class="back-btn">
       ← Back to Faculty List
     </a>
   </div>
 
 </div>
+
+</body>
+</html>
