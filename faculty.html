@@ -1,35 +1,36 @@
 <style>
-  /* เปลี่ยน Import เป็นฟอนต์ Kanit */
   @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
 
   :root {
     --primary-color: #0056b3; 
     --hover-color: #eef4fb;
+    --text-dark: #333;
+    --text-muted: #666;
   }
 
   .faculty-container {
-    /* เปลี่ยนชื่อฟอนต์ที่นี่ */
     font-family: 'Kanit', sans-serif;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 15px; /* ลด Padding เล็กน้อยสำหรับมือถือ */
   }
 
-  /* หัวข้อหมวดหมู่ */
   .section-title {
-    font-size: 1.6rem; 
+    font-size: 1.5rem; 
     color: var(--primary-color);
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #eee;
     padding-bottom: 10px;
     margin-top: 30px;
     margin-bottom: 20px;
     font-weight: 600;
+    text-align: left;
   }
 
   .faculty-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    /* ปรับเป็น Grid ที่ขยายอัตโนมัติ: ขั้นต่ำ 160px ในมือถือ และ 240px ในคอม */
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
     justify-content: center;
   }
 
@@ -39,8 +40,7 @@
     background: white;
     border: 1px solid #e0e0e0;
     border-radius: 12px;
-    width: 250px;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -49,53 +49,72 @@
     align-items: center;
   }
 
-  .faculty-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    border-color: var(--primary-color);
+  /* Hover effect เฉพาะบนอุปกรณ์ที่มีเม้าส์ */
+  @media (hover: hover) {
+    .faculty-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      border-color: var(--primary-color);
+    }
   }
 
   .faculty-img {
-    width: 110px; 
-    height: 110px;
+    width: 100px; 
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    background-color: #eee;
-    margin-bottom: 15px;
+    background-color: #f8f8f8;
+    margin-bottom: 12px;
     border: 3px solid white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 
   .name {
-    font-size: 1.15rem;
+    font-size: 1rem; /* ปรับขนาดให้พอดีหน้าจอเล็ก */
     font-weight: 600; 
-    color: #333;
-    margin-bottom: 5px;
+    color: var(--text-dark);
+    margin-bottom: 4px;
     line-height: 1.3;
   }
 
   .position {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--primary-color);
     font-weight: 400;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
   }
 
   .sec-tag {
-    font-size: 0.85rem;
-    color: #666;
-    background-color: #f5f5f5;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background-color: #f0f0f0;
     padding: 2px 10px;
-    border-radius: 200px; 
-    display: inline-block;
+    border-radius: 20px; 
+    margin-top: auto; /* ดัน tag ลงไปข้างล่างให้เท่ากัน */
+  }
+
+  /* ปรับแต่งสำหรับหน้าจอใหญ่ (คอมพิวเตอร์) */
+  @media (min-width: 768px) {
+    .faculty-grid {
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 25px;
+    }
+    .faculty-img {
+      width: 120px;
+      height: 120px;
+    }
+    .name {
+      font-size: 1.1rem;
+    }
+    .faculty-container {
+      padding: 30px;
+    }
   }
 </style>
 
 <div class="faculty-container">
-
   <div class="section-title">Leadership Team</div>
   <div class="faculty-grid">
-    
     <a href="maew.html" class="faculty-card">
       <img src="https://drive.google.com/thumbnail?id=13OP-FfyJqIX2a28FXoQT8G3t0YvJ45Ra&sz=w1000" class="faculty-img">
       <div class="name">อ. แมว-ปาริฉัตร อยู่ประเสริฐ</div>
@@ -109,12 +128,10 @@
       <div class="position">Director of Choral Studies</div>
       <div class="sec-tag">Sec 34</div>
     </a>
-
   </div>
 
   <div class="section-title">Voice Faculty</div>
   <div class="faculty-grid">
-
     <a href="fish.html" class="faculty-card">
       <img src="https://drive.google.com/thumbnail?id=1mrzYEYZ2iDcLugBFh3ZmUlZLe90uFURc&sz=w1000" class="faculty-img">
       <div class="name">อ. ฟิช-กฤตธัช พิสุทธิวงษ์</div>
@@ -192,6 +209,5 @@
       <div class="name">อ. พิม-ณิศวรา พาทพุทธิพงศ์</div>
       <div class="sec-tag">Sec 63</div>
     </a>
-
   </div>
 </div>
