@@ -1,0 +1,243 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+  :root {
+    --primary-color: #0056b3;
+    --text-color: #333;
+    --bg-gray: #f9fbfd;
+  }
+
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Kanit', sans-serif;
+    background-color: transparent;
+    color: var(--text-color);
+  }
+
+  .profile-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+
+  /* === Header Section === */
+  .header-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    border-bottom: 1px solid #eee;
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+  }
+
+  .header-info h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    color: var(--primary-color);
+    line-height: 1.2;
+  }
+
+  .header-info h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0 0 15px 0;
+    color: #555;
+  }
+  
+  .aka-text {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .sec-badge {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  /* === Content Layout === */
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* แบ่งครึ่งซ้ายขวา */
+    gap: 40px;
+    padding: 40px;
+    align-items: start;
+  }
+
+  .bio-column h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  /* List Styling */
+  .bio-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .bio-list li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .bio-list li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+
+  /* === Footer / Back Button === */
+  .footer-nav {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    background-color: #fafafa;
+  }
+
+  .back-btn {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .back-btn:hover { color: var(--primary-color); }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .content-grid {
+      grid-template-columns: 1fr;
+      padding: 20px;
+      gap: 30px;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+    }
+  }
+</style>
+
+<div class="profile-wrapper">
+
+  <div class="header-section">
+    <img src="https://drive.google.com/thumbnail?id=1HNgais62J0Nrmwxqb-3mqki_e2MLDoZB&sz=w1000" class="profile-pic">
+    
+    <div class="header-info">
+      <h1>อ. อือ-วิษุวัต เปรมปรี<br><span style="font-size:0.8em; color:#666;">Wisuwat Prempree</span></h1>
+      <span class="aka-text">AKA : PandaBoyz</span>
+      <h2>Voice Faculty Member</h2>
+      <span class="sec-badge">Sec 64</span>
+    </div>
+  </div>
+
+  <div class="content-grid">
+    
+    <div class="bio-column">
+      <h3>การศึกษา และ การทำงาน</h3>
+      <ul class="bio-list">
+        <li><strong>การศึกษา:</strong> ปริญญาตรี วิทยาลัยดนตรี ดนตรีแจ๊สศึกษา เอก ขับร้อง</li>
+        <li><strong>ปัจจุบัน:</strong> อาจารย์พิเศษ ภาควิชาขับร้องที่ วิทยาลัยดนตรีมหาวิทยาลัยรังสิต</li>
+        <li>อาจารย์พิเศษวิชาประพันธุ์เนื้อร้องที่ โรงเรียนดุริยางค์ทหารเรือ</li>
+        <li>อาจารย์พิเศษวิชา Singing practice in various styles ที่ เอกการจัดการและพัฒนาไอดอลและอินฟลูเอนเซอร์ ม. ศิลปกร วังท่าพระ</li>
+        <li>อาจารย์สอนแร็ปที่ Blkgem ในเครือ GMM</li>
+        <li>ทำหลักสูตร แร็ปออนไลน์ by PandaBoyz กับทาง Future Skill</li>
+      </ul>
+      
+      <br>
+
+      <h3>ผลงานการประกวด และ เขียนเพลง</h3>
+      <ul class="bio-list">
+        <li>รางวัลชมเชย และ นักร้องเอนเตอร์เทนเนอร์ยอดเยี่ยม Hot Wave Music #9</li>
+        <li>เข้าร่วมแข่งขันรายการ The Rapper ได้ร่วมทีม กอล์ฟ F.Hero</li>
+        <li>เข้าร่วมแข่งขันรายการ The Rapper 2 ได้ร่วมทีม PMC ปู่จ๋านลองไมค์</li>
+        <li>เข้าร่วมแข่งขันรายการ Show Me The Money Thailand SS2 ได้ร่วมทีม Still Fly ของ ซันนี่เดย์ ไทเทเนียม และ เฟรดดี้ เซาธ์ไซด์</li>
+        <li>ชนะเลิศรายการประกวดทำเพลงและวงดนตรี Pro Plugin Amplify Your Dreams Contest #4</li>
+        <li>เพลงประกอบโฆษณา อุ่นใจ by AIS ขับร้องโดย แบมแบม Got7</li>
+        <li>เพลง 10 แพ็คเกจ กรมนามัย กระทรวงสาธารณสุข</li>
+        <li>เพลง คุจังวะ เพลงประกอบช่องรายการ Online Station ทาง Youtube</li>
+        <li>เพลง หนึ่งวินาที ประกอบซีรี่ส์ Interns หมอมือใหม่</li>
+        <li>เขียนแร็ปเพลง ผู้ชายร้ายร้าย (Bad Guys) ประกอบซีรี่ส์ Pit Babes</li>
+        <li>เพลง Stay ประกอบซีรี่ส์ วิชาทุก(ข์)พื้นฐาน ทางช่อง ThaiPBS</li>
+        <li>เพลง ฝันร้ายครั้งสุดท้าย ประกอบซีรี่ส์ Rock & Soul ทางช่อง 7</li>
+      </ul>
+    </div>
+
+    <div class="bio-column">
+      <h3>Education & Work</h3>
+      <ul class="bio-list">
+        <li><strong>Education:</strong> Bachelor of Music, Jazz Studies (Voice), Rangsit University.</li>
+        <li><strong>Current:</strong> Adjunct Faculty, Voice Department, Rangsit University.</li>
+        <li>Adjunct Faculty, Lyric Writing, Royal Thai Navy School of Music.</li>
+        <li>Adjunct Faculty, Singing practice in various styles, Idol and Influencer Management and Development, Silpakorn University.</li>
+        <li>Rap Instructor at BLKGEM (GMM Grammy).</li>
+        <li>Creator of "Online Rap Course by PandaBoyz" with Future Skill.</li>
+      </ul>
+
+      <br>
+
+      <h3>Competitions & Songwriting</h3>
+      <ul class="bio-list">
+        <li>Hot Wave Music #9: Honorable Mention & Best Entertainer.</li>
+        <li>The Rapper: Team Golf F.Hero.</li>
+        <li>The Rapper 2: Team PMC (Pu Jan Long Mic).</li>
+        <li>Show Me The Money Thailand SS2: Team Still Fly (Sunny Day & Freddy V).</li>
+        <li>Winner, Pro Plugin Amplify Your Dreams Contest #4.</li>
+        <li>Songwriter: "Aun Jai" (AIS Ad) sung by BamBam Got7.</li>
+        <li>Songwriter: "10 Packages" (Department of Health).</li>
+        <li>Songwriter: "Ku Jang Wa" (Online Station Theme).</li>
+        <li>Songwriter: "One Second" (Interns Series).
+        <li>Rap Lyrics: "Bad Guys" (Pit Babes Series).</li>
+        <li>Songwriter: "Stay" (Wicha Tuk(k) Puen Than Series - ThaiPBS).</li>
+        <li>Songwriter: "Last Nightmare" (Rock & Soul Series - Ch7).</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-nav">
+    <a href="https://sites.google.com/view/rsuvoicearea/faculty-list" class="back-btn">
+      ← Back to Faculty List
+    </a>
+  </div>
+
+</div>
