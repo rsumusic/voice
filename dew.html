@@ -1,167 +1,179 @@
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>อ. ภัท ชัยวินิตย์ - RSU VOICE AREA</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
 
-  :root {
-    --primary-color: #0056b3;
-    --text-color: #333;
-    --bg-color: #ffffff;
-    --gray-text: #666;
-  }
+    :root {
+      --primary-color: #0056b3;
+      --text-color: #333;
+      --bg-color: #ffffff;
+      --gray-text: #666;
+    }
 
-  body {
-    margin: 0;
-    padding: 20px;
-    font-family: 'Kanit', sans-serif;
-    background-color: transparent;
-  }
+    body {
+      margin: 0;
+      padding: 15px; /* ลด Padding สำหรับมือถือ */
+      font-family: 'Kanit', sans-serif;
+      background-color: #f5f7fa; /* เพิ่มสีพื้นหลังให้อ่อนๆ เพื่อให้ Container เด่นขึ้น */
+    }
 
-  .profile-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: var(--bg-color);
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    overflow: hidden;
-    position: relative;
-  }
+    .profile-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--bg-color);
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      overflow: hidden;
+      position: relative;
+    }
 
-  /* === Header === */
-  .profile-header {
-    text-align: center;
-    padding: 40px 20px 20px 20px;
-    background: linear-gradient(to bottom, #f9fbfd, #ffffff);
-    border-bottom: 1px solid #eee;
-  }
+    /* === Header === */
+    .profile-header {
+      text-align: center;
+      padding: 30px 15px 20px 15px;
+      background: linear-gradient(to bottom, #f9fbfd, #ffffff);
+      border-bottom: 1px solid #eee;
+    }
 
-  .profile-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    margin-bottom: 20px;
-  }
+    .profile-img {
+      width: 180px; /* ปรับขนาดเริ่มต้นให้พอดีมือถือ */
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      margin-bottom: 20px;
+    }
 
-  .profile-name {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--text-color);
-    margin: 0 0 5px 0;
-    line-height: 1.3;
-  }
+    .profile-name {
+      font-size: 1.6rem; /* ปรับขนาด font สำหรับชื่อ */
+      font-weight: 600;
+      color: var(--text-color);
+      margin: 0 0 5px 0;
+      line-height: 1.3;
+    }
 
-  .profile-role {
-    font-size: 1.1rem;
-    color: var(--primary-color);
-    font-weight: 500;
-    margin: 0 0 10px 0;
-  }
+    .profile-role {
+      font-size: 1rem;
+      color: var(--primary-color);
+      font-weight: 500;
+      margin: 0 0 10px 0;
+    }
 
-  .sec-badge {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 400;
-  }
+    .sec-badge {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 400;
+    }
 
-  /* === Content === */
-  .bio-content {
-    padding: 40px;
-    color: #444;
-    font-size: 1rem;
-  }
+    /* === Content === */
+    .bio-content {
+      padding: 30px 20px; /* ลด Padding สำหรับมือถือ */
+      color: #444;
+      font-size: 0.95rem; /* ปรับขนาดให้อ่านง่ายบนมือถือ */
+    }
 
-  .bio-section-title {
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: var(--primary-color);
-    margin-top: 30px;
-    margin-bottom: 20px;
-    border-left: 4px solid var(--primary-color);
-    padding-left: 10px;
-  }
-  
-  .bio-section-title:first-child {
-    margin-top: 0;
-  }
+    .bio-section-title {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--primary-color);
+      margin-top: 25px;
+      margin-bottom: 15px;
+      border-left: 4px solid var(--primary-color);
+      padding-left: 10px;
+    }
+    
+    .bio-section-title:first-child {
+      margin-top: 0;
+    }
 
-  /* List Styles */
-  .bio-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+    /* List Styles */
+    .bio-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
 
-  .bio-list li {
-    margin-bottom: 12px;
-    padding-left: 20px;
-    position: relative;
-    line-height: 1.6;
-    font-weight: 300;
-  }
+    .bio-list li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.5;
+      font-weight: 300;
+    }
 
-  .bio-list li::before {
-    content: "•";
-    color: var(--primary-color);
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
+    .bio-list li::before {
+      content: "•";
+      color: var(--primary-color);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
 
-  /* Song List Grouping */
-  .song-category {
-    font-weight: 500;
-    color: #555;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    display: block;
-    text-decoration: underline;
-    text-decoration-color: #ddd;
-  }
+    /* Song List Grouping */
+    .song-category {
+      font-weight: 500;
+      color: #555;
+      margin-top: 15px;
+      margin-bottom: 8px;
+      display: block;
+      text-decoration: underline;
+      text-decoration-color: #ddd;
+    }
 
-  /* Footer */
-  .footer-action {
-    text-align: center;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-top: 1px solid #eee;
-  }
+    /* Footer */
+    .footer-action {
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 10px;
+      border-top: 1px solid #eee;
+    }
 
-  .back-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    padding: 10px 25px;
-    background-color: white;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s;
-  }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 10px 25px;
+      background-color: white;
+      color: var(--primary-color);
+      border: 1px solid var(--primary-color);
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s;
+      font-size: 0.9rem;
+    }
 
-  .back-btn:hover {
-    background-color: var(--primary-color);
-    color: white;
-  }
+    .back-btn:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
 
-  @media (max-width: 600px) {
-    .profile-name { font-size: 1.5rem; }
-    .bio-content { padding: 20px; }
-    .profile-img { width: 150px; height: 150px; }
-  }
-</style>
+    /* === Responsive Adjustments === */
+    @media (max-width: 600px) {
+      body { padding: 10px; }
+      .profile-name { font-size: 1.4rem; }
+      .bio-content { padding: 25px 15px; }
+      .profile-img { width: 150px; height: 150px; }
+      .profile-header { padding: 25px 10px 15px 10px; }
+    }
+  </style>
+</head>
+<body>
 
 <div class="profile-container">
   
   <div class="profile-header">
-    <img src="https://drive.google.com/thumbnail?id=1ZI9JPFzX3yNeJNzYrDoyI-A7t_MdH0a3&sz=w1000" class="profile-img">
+    <img src="https://drive.google.com/thumbnail?id=1ZI9JPFzX3yNeJNzYrDoyI-A7t_MdH0a3&sz=w1000" class="profile-img" alt="Profile Image">
     
     <h1 class="profile-name">อ. ภัท ชัยวินิตย์ (ดิว อรุณพงศ์)</h1>
     <h2 class="profile-role">Voice Faculty Member</h2>
@@ -196,44 +208,28 @@
 
     <span class="song-category">Singles</span>
     <ul class="bio-list">
-      <li>คนน่ารักที่ไม่น่าไปรัก</li>
-      <li>วิธีเลิก วิธีลืม</li>
-      <li>ลมใต้ปีก</li>
-      <li>บรรยากาศชวนเพลี่ยงพล้ำ</li>
-      <li>คำว่ารักของเราต่างกัน (Feat. นท พนายางกูร)</li>
-      <li>มีความสุขบนความทุกข์ของตัวเอง</li>
-      <li>คาถากั้นน้ำตา, ไอ้บ้าเอ๊ย, ขอบคุณนะ</li>
+      <li>คนน่ารักที่ไม่น่าไปรัก, วิธีเลิก วิธีลืม, ลมใต้ปีก, บรรยากาศชวนเพลี่ยงพล้ำ, คำว่ารักของเราต่างกัน (Feat. นท พนายางกูร), มีความสุขบนความทุกข์ของตัวเอง, คาถากั้นน้ำตา, ไอ้บ้าเอ๊ย, ขอบคุณนะ</li>
     </ul>
 
     <span class="song-category">เพลงประกอบละคร/ซีรีส์</span>
     <ul class="bio-list">
-      <li>หัวใจกั้นฟ้า (อยากหยุดตะวันไว้ที่ปลายฟ้า)</li>
-      <li>คนไม่ดีที่รักเธอ (เพลงรักริมขอบฟ้า)</li>
-      <li>กลัวความมืด, ยิ่งมืดยิ่งเห็นดาว (เซน...สื่อรักสื่อวิญญาณ)</li>
-      <li>แลกทั้งใจแค่ได้รักเธอ (ฮีโร่ 1000 รัก)</li>
-      <li>ความห่วงใยจากใครบางคน (คนเถื่อน)</li>
-      <li>ที่รักหรือที่พัก (ลิขิตฟ้าชะตาดิน)</li>
-      <li>ก่อนจะรักไปกว่านี้ (เล่ห์รตี), สลักจิต (สลักจิต)</li>
-      <li>ไม่ว่าอะไร (บังเอิญรัก), จากนี้และวันต่อไป (ด้ายแดง)</li>
-      <li>ยิ่งเจ็บยิ่งรัก (วิมานสีทอง) และอื่นๆ</li>
+      <li>หัวใจกั้นฟ้า, คนไม่ดีที่รักเธอ, กลัวความมืด, ยิ่งมืดยิ่งเห็นดาว, แลกทั้งใจแค่ได้รักเธอ, ความห่วงใยจากใครบางคน, ที่รักหรือที่พัก, ก่อนจะรักไปกว่านี้, สลักจิต, ไม่ว่าอะไร (บังเอิญรัก), จากนี้และวันต่อไป (ด้ายแดง), ยิ่งเจ็บยิ่งรัก (วิมานสีทอง)</li>
     </ul>
 
     <div class="bio-section-title">ผลงานในฐานะผู้ประพันธ์เพลง (Songwriter)</div>
     <ul class="bio-list">
       <li>ไม่ว่าอะไร (Wish This Love), หวัง, เพลงเดิม (ซีรีส์ บังเอิญรัก SS1 & SS2)</li>
       <li>I Found You, จากนี้และวันต่อไป, อยากบอกเธอ, หรือเราเคยพบกัน (ซีรีส์ ด้ายแดง)</li>
-      <li>ไม่มีวันปล่อยมือ (ละคร หน้ากากแก้ว)</li>
-      <li>เคียงกัน (ละคร ลูกกรุง)</li>
-      <li>แค่มองว่าเรารักกันก็พอ (ละคร คุณชาย)</li>
-      <li>เต๊าะ (Promise)</li>
-      <li>แค่คนตัวเล็กๆ (ซีรีส์ ชอร์กะเชร์คู่กัน)</li>
-      <li>ดวงอาทิตย์เที่ยงคืน Midnight Shine (ซีรีส์ รับ(รัก)ออกแบบ)</li>
+      <li>ไม่มีวันปล่อยมือ (ละคร หน้ากากแก้ว), เคียงกัน (ละคร ลูกกรุง), แค่มองว่าเรารักกันก็พอ (ละคร คุณชาย), เต๊าะ (Promise), แค่คนตัวเล็กๆ (ซีรีส์ ชอร์กะเชร์คู่กัน), ดวงอาทิตย์เที่ยงคืน Midnight Shine (ซีรีส์ รับ(รัก)ออกแบบ)</li>
     </ul>
 
   </div>
 
   <div class="footer-action">
-    <a href="https://sites.google.com/view/rsuvoicearea/faculty-list" class="back-btn">← Back to Faculty List</a>
+    <a href="faculty.html" class="back-btn">← Back to Faculty List</a>
   </div>
 
 </div>
+
+</body>
+</html>
