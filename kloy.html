@@ -1,0 +1,374 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+  :root {
+    --primary-color: #0056b3;
+    --text-color: #333;
+    --bg-color: #ffffff;
+    --section-bg: #f9fbfd;
+  }
+
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Kanit', sans-serif;
+    background-color: transparent;
+  }
+
+  .profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--bg-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+
+  /* --- HEADER SECTION (UPDATED) --- */
+  .header-top {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+    background: linear-gradient(to bottom, #f0f4f8, #ffffff);
+    position: relative;
+    border-bottom: 1px solid #eee;
+  }
+
+  .profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+  }
+
+  .profile-name-en {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0 0 5px 0;
+    line-height: 1.2;
+  }
+
+  .profile-name-th {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+  }
+
+  .role-text {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .sec-badge {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+
+  .contact-bar {
+    text-align: center;
+    padding: 12px;
+    background: #f8f9fa;
+    color: #666;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .contact-bar a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+  }
+   
+  .contact-bar a:hover { color: var(--primary-color); }
+
+  /* --- BODY CONTENT (2 Columns) --- */
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px; 
+    padding: 40px 40px 20px 40px; /* ลด padding ล่างเพื่อให้ส่วนวิชาสอนขยับขึ้นมา */
+  }
+
+  .col-th { 
+    border-right: 1px solid #eee; 
+    padding-right: 25px; 
+  }
+  .col-en { 
+    padding-left: 25px; 
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-top: 35px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #f0f0f0;
+  }
+   
+  .section-title:first-child { margin-top: 0; }
+
+  p {
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1.2em;
+    font-size: 1rem;
+    /* แก้ไขจาก justify เป็น left เพื่อแก้ปัญหาตัวอักษรห่าง */
+    text-align: left;
+  }
+
+  /* Lists */
+  ul.bio-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul.bio-list li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  ul.bio-list li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 1.2;
+  }
+
+  strong {
+    font-weight: 500;
+    color: #000;
+  }
+
+  /* --- TEACHING SECTION (NEW STYLE) --- */
+  .teaching-wrapper {
+    padding: 20px 40px 40px 40px;
+    border-top: 1px solid #eee; /* เส้นคั่นแยกส่วนวิชาสอน */
+    background-color: #fafafa;
+  }
+
+  .teaching-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+  }
+
+  .teaching-card {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--primary-color);
+    font-weight: 500;
+    color: var(--text-color);
+    transition: transform 0.2s;
+  }
+
+  .teaching-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .teaching-card span {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9em;
+    font-weight: 400;
+    color: #666;
+  }
+
+  .footer-action {
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-top: 1px solid #eee;
+  }
+
+  .back-btn {
+    padding: 12px 35px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  .back-btn:hover { background: var(--primary-color); color: white; }
+
+  /* Mobile Responsive */
+  @media (max-width: 900px) {
+    .content-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      padding: 20px;
+    }
+    .col-th { border-right: none; border-bottom: 1px solid #eee; padding-bottom: 40px; padding-right: 0; }
+    .col-en { padding-left: 0; }
+    .teaching-wrapper { padding: 20px; }
+  }
+</style>
+
+<div class="profile-container">
+   
+  <div class="header-top">
+    <img src="https://drive.google.com/thumbnail?id=1WZ-C4uPgZVbktozkUiDSM9BYyxsgJCFP&sz=w1000" class="profile-img">
+     
+    <h1 class="profile-name-en">อ. กลอย–ดลหทัย อินทวงศ์, ดร.</h1>
+    <h2 class="profile-name-th">Dolhathai Kloy Intawong, DA</h2>
+     
+    <div class="role-text">
+      Director of Choral Studies<br>
+      Conductor / Choral Clinician / Educator
+    </div>
+
+    <div class="sec-badge">Sec 34</div>
+  </div>
+
+  <div class="contact-bar">
+    ✉️ <a href="mailto:Dolhathai.i@rsu.ac.th">Dolhathai.i@rsu.ac.th</a> | 
+    🌐 <a href="http://www.kloyintawong.com" target="_blank">www.kloyintawong.com</a>
+  </div>
+
+  <div class="content-grid">
+     
+    <div class="col-th">
+       
+      <div class="section-title">ประวัติ</div>
+      <p>
+        ดร.ดลหทัย อินทวงศ์ วาทยกรและนักการศึกษาดนตรี ผู้เชี่ยวชาญด้านการอำนวยเพลง การขับร้องประสานเสียง และการสอนขับร้อง ดร.ดลหทัยมีความสนใจอย่างลึกซึ้งในดนตรีประสานเสียงหลากหลายวัฒนธรรม (Multicultural Choral Music) โดยมุ่งเน้นการบูรณาการดนตรีตะวันตกและตะวันออก ปัจจุบันเป็นผู้อำนวยการคณะนักร้องประสานเสียง และอาจารย์ประจำกลุ่มวิชาขับร้อง วิทยาลัยดนตรี มหาวิทยาลัยรังสิต
+      </p>
+
+      <div class="section-title">การศึกษา</div>
+      <ul class="bio-list">
+        <li><strong>ปริญญาเอก (Doctor of Arts):</strong> สาขา Choral Conducting วิชาโท Vocal Performance จาก University of Northern Colorado สหรัฐอเมริกา</li>
+        <li><strong>ปริญญาโท (Master of Fine Arts):</strong> สาขา Choral Conducting จาก Shanghai Conservatory of Music สาธารณรัฐประชาชนจีน</li>
+        <li><strong>ปริญญาตรี (Bachelor of Arts):</strong> สาขา Vocal Performance จาก วิทยาลัยดุริยางคศิลป์ มหาวิทยาลัยมหิดล</li>
+        <li><strong>ประกาศนียบัตร:</strong> Vocal Performance Advanced Certificate จาก Trinity College London และ Kodály Method Certificate จาก International Kodály Society</li>
+      </ul>
+
+      <div class="section-title">ประสบการณ์การทำงาน</div>
+      <p>
+        <strong>ในเวทีระดับนานาชาติ</strong> ดร.ดลหทัย ได้รับตำแหน่งรองผู้อำนวยเพลง Associate Conductor ระหว่างปี 2023-2024 วง The Washington Chorus วงประสานเสียงเจ้าของรางวัล GRAMMY® ณ กรุงวอชิงตัน ดี.ซี. โดยได้ร่วมงานกับวงออร์เคสตราชั้นนำอย่าง National Symphony Orchestra และ National Philharmonic Orchestra ร่วมแสดงในสถานที่สำคัญ อาทิ The John F. Kennedy Center for the Performing Arts, Strathmore Music Center และ Wolf Trap National Park for the Performing Arts
+      </p>
+      <p>
+        <strong>ในรัฐโคโลราโด</strong> ดร.ดลหทัย รับหน้าที่ Music Director วง Colorado Asian Mixed Ensemble และ Artistic Director วง Sine Nomine Chorus และสอนที่ University of Northern Colorado และ Front Range Community College ดร.ดลหทัยมีผลงานการแสดงร่วมกับวงดนตรีชั้นนำ อาทิ Colorado Springs Philharmonic Orchestra, Greeley Philharmonic Orchestra และ Colorado Symphony Chorus
+      </p>
+      <p>
+        <strong>ในประเทศไทย</strong> ดร.ดลหทัย ได้รับเชิญเป็นผู้อำนวยเพลงและนักร้องให้กับ "สวนพลูคอรัส" (Suanplu Chorus) โดยนำวงเข้าร่วมแสดงเทศกาลดนตรีทั้งในและต่างประเทศ อาทิ ตัวแทนประเทศไทยในการแสดง ณ สำนักงานใหญ่ UNESCO (กรุงปารีส) นอกจากนี้ ดร.ดลหทัย รับหน้าที่เป็น Choral Master ให้กับ Royal Bangkok Symphony Orchestra (RBSO) ในพระอุปถัมภ์สมเด็จพระเจ้าลูกเธอ เจ้าฟ้าสิริวัณณวรี นารีรัตนราชกัญญา
+      </p>
+      <p>
+        ดร.ดลหทัยในฐานะผู้ก่อตั้งและอำนวยการ RSU Concert Singers ได้พาวงคว้ารางวัลระดับเหรียญทอง จากการแข่งขัน Lanna International Choir Competition 2016 และได้รับเชิญไปแสดงในงาน Culture and Arts Festival of Countries in the Lancang-Mekong River Basin ณ เมืองสิบสองปันนา สาธารณรัฐประชาชนจีน
+      </p>
+
+      <div class="section-title">รางวัลและเกียรติประวัติ</div>
+      <ul class="bio-list">
+        <li>รางวัลชนะเลิศการแข่งขันวาทยกร 2020 SWACDA Graduate Conducting Competition สหรัฐอเมริกา</li>
+        <li>ได้รับคัดเลือกเป็น Choral Conducting Fellow ในโครงการ 2020 Frost Young Women Conductors' Symposium สหรัฐอเมริกา</li>
+        <li>รับคัดเลือกเป็น 1 ใน 5 วาทยกรเข้าร่วมโครงการ NCCO Graduate Conducting Fellow (2022) โดย National Collegiate Choral Organization สหรัฐอเมริกา</li>
+        <li>รับคัดเลือกเป็น Conducting Fellow เข้าร่วมโครงการ Chorus America: Choral Orchestral Conducting Academy ในปี 2023 และ 2025 สหรัฐอเมริกา</li>
+        <li>ทุนกองทุนส่งเสริมดนตรีคลาสสิกในพระอุปถัมภ์สมเด็จพระเจ้าพี่นางเธอ เจ้าฟ้ากัลยาณิวัฒนา กรมหลวงนราธิวาสราชนครินทร์</li>
+        <li>ทุนรัฐบาลนครเซี่ยงไฮ้ วิทยาลัยดนตรีแห่งนครเซี่ยงไฮ้ สาธารณรัฐประชาชนจีน</li>
+        <li>รางวัล "Most Promising Young Conductor" จาก Lanna International Choir Competition 2016</li>
+      </ul>
+
+      <div class="section-title">บทบาททางวิชาการ</div>
+      <p>
+        ด้วยความมุ่งมั่นยกระดับมาตรฐานเพลงประสานเสียงไทย ดร.ดลหทัย ได้ร่วมก่อตั้งสมาคมผู้อำนวยเพลงประสานเสียงประเทศไทย (Thailand Choral Directors Association - TCDA) เพื่อสร้างเครือข่ายและพัฒนาศักยภาพผู้อำนวยเพลงไทย
+      </p>
+      <p>
+        งานด้านวิชาการ ดร.ดลหทัยได้นำเสนอผลงานวิจัยเกี่ยวกับเพลงขับร้องประสานเสียงสำเนียงภาษาไทยในงานประชุมวิชาการระดับนานาชาติ อาทิ Rocky Mountain Music Scholars Conference ณ University of Colorado, Boulder และ Teaching World Music Symposium ณ Northern Illinois University (2025)
+      </p>
+
+    </div>
+
+    <div class="col-en">
+       
+      <div class="section-title">Biography</div>
+      <p>
+        Dr. Dolhathai Intawong is a conductor and music educator specializing in conducting, choral music, and vocal pedagogy. She possesses a deep interest in Multicultural Choral Music, specifically focusing on the integration of Western and Eastern musical traditions. Currently, she serves as the Director of Choral Studies and Faculty at the Conservatory of Music, Rangsit University.
+      </p>
+
+      <div class="section-title">Education</div>
+      <ul class="bio-list">
+        <li><strong>Doctor of Arts (D.A.):</strong> Choral Conducting (Secondary: Vocal Performance), University of Northern Colorado, USA</li>
+        <li><strong>Master of Fine Arts (M.F.A.):</strong> Choral Conducting, Shanghai Conservatory of Music, China</li>
+        <li><strong>Bachelor of Arts (B.A.):</strong> Vocal Performance, College of Music, Mahidol University, Thailand</li>
+        <li><strong>Certificates:</strong> Vocal Performance Advanced Certificate (Trinity College London) and Kodály Method Certificate (International Kodály Society)</li>
+      </ul>
+
+      <div class="section-title">Professional Experience</div>
+      <p>
+        <strong>Internationally,</strong> Dr. Intawong served as the Associate Conductor (2023-2024) for The Washington Chorus, a GRAMMY® Award-winning ensemble in Washington, D.C. She collaborated with leading orchestras such as the National Symphony Orchestra and National Philharmonic Orchestra, performing at prestigious venues including The John F. Kennedy Center for the Performing Arts, Strathmore Music Center, and Wolf Trap National Park for the Performing Arts.
+      </p>
+      <p>
+        <strong>In Colorado,</strong> she served as Music Director for the Colorado Asian Mixed Ensemble and Artistic Director for the Sine Nomine Chorus. She also held teaching positions at the University of Northern Colorado and Front Range Community College, with performance collaborations with the Colorado Springs Philharmonic Orchestra, Greeley Philharmonic Orchestra, and Colorado Symphony Chorus.
+      </p>
+      <p>
+        <strong>In Thailand,</strong> Dr. Intawong has been a guest conductor and singer for the "Suanplu Chorus," leading the ensemble in music festivals both locally and internationally, including representing Thailand in a performance at UNESCO Headquarters in Paris. Furthermore, she served as Choral Master for the Royal Bangkok Symphony Orchestra (RBSO) under the Royal Patronage of Her Royal Highness Princess Sirivannavari Nariratana Rajakanya.
+      </p>
+      <p>
+        As the founder and director of the RSU Concert Singers, Dr. Intawong led the choir to win a Gold Medal at the Lanna International Choir Competition 2016. The ensemble was also invited to perform at the Culture and Arts Festival of Countries in the Lancang-Mekong River Basin in Xishuangbanna, China.
+      </p>
+
+      <div class="section-title">Awards & Fellowships</div>
+      <ul class="bio-list">
+        <li>Award-Winner, 2020 SWACDA Graduate Conducting Competition, USA</li>
+        <li>Choral Conducting Fellow, 2020 Frost Young Women Conductors' Symposium, USA</li>
+        <li>Selected as one of five conductors for the NCCO Graduate Conducting Fellow (2022) by the National Collegiate Choral Organization, USA</li>
+        <li>Conducting Fellow, Chorus America: Choral Orchestral Conducting Academy in 2023 and 2025, USA</li>
+        <li>Scholarship from the Fund for Classical Music Promotion under the Patronage of HRH Princess Galyani Vadhana</li>
+        <li>Shanghai Government Scholarship at Shanghai Conservatory of Music</li>
+        <li>"Most Promising Young Conductor" Award from Lanna International Choir Competition 2016</li>
+      </ul>
+
+      <div class="section-title">Academic & Professional Service</div>
+      <p>
+        Committed to raising the standards of Thai choral music, Dr. Intawong co-founded the Thailand Choral Directors Association (TCDA) to build a network and develop the potential of Thai conductors.
+      </p>
+      <p>
+        In her academic work, Dr. Intawong has presented research on Thai choral diction at international conferences, such as the Rocky Mountain Music Scholars Conference at the University of Colorado, Boulder, and the Teaching World Music Symposium at Northern Illinois University (2025).
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="teaching-wrapper">
+    <div class="section-title">วิชาที่สอน (Teaching Areas)</div>
+    <div class="teaching-grid">
+      <div class="teaching-card">Applied Music (Voice)<span>วิชาดนตรีปฏิบัติ (ขับร้อง)</span></div>
+      <div class="teaching-card">Applied Music (Conducting)<span>วิชาดนตรีปฏิบัติ (การอำนวยเพลง)</span></div>
+      <div class="teaching-card">Basic Conducting<span>วิชาการอำนวยเพลงเบื้องต้น</span></div>
+      <div class="teaching-card">Diction II<span>วิชาการออกเสียง 2</span></div>
+      <div class="teaching-card">Vocal Literature<span>วิชาวรรณกรรมเพลงร้อง</span></div>
+      <div class="teaching-card">Chorus<span>วิชาขับร้องประสานเสียง</span></div>
+    </div>
+  </div>
+
+  <div class="footer-action">
+    <a href="https://sites.google.com/view/rsuvoicearea/faculty-list" class="back-btn">← Back to Faculty List</a>
+  </div>
+
+</div>
