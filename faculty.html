@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Faculty List - RSU Voice Area</title>
-  
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
 
@@ -21,9 +20,9 @@
     }
 
     .faculty-container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 10px; /* ลดขอบข้างให้การ์ดมีพื้นที่ขยาย */
+      padding: 10px;
     }
 
     .section-title {
@@ -31,24 +30,23 @@
       color: var(--primary-color);
       border-left: 5px solid var(--primary-color);
       padding-left: 15px;
-      margin: 25px 0 15px 5px;
+      margin: 30px 0 20px 10px;
       font-weight: 600;
     }
 
-    /* --- ปรับ Grid ให้ใหญ่และชัดเจนในมือถือ --- */
     .faculty-grid {
       display: grid;
       /* มือถือ: แสดง 2 คอลัมน์แบบเต็มตา */
       grid-template-columns: repeat(2, 1fr); 
-      gap: 12px;
-      padding: 5px;
+      gap: 15px;
+      padding: 10px;
     }
 
-    /* เมื่อจอใหญ่ขึ้น (คอมพิวเตอร์) ให้แสดง 4 คอลัมน์ */
+    /* Tablet/PC: ขยายเป็น 4 คอลัมน์ */
     @media (min-width: 768px) {
       .faculty-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 25px;
       }
       .section-title { font-size: 2rem; }
       .faculty-container { padding: 20px; }
@@ -58,66 +56,65 @@
       text-decoration: none;
       color: inherit;
       background: white;
-      border-radius: 16px;
-      padding: 20px 10px;
+      border-radius: 20px;
+      padding: 25px 10px;
       text-align: center;
-      transition: all 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
       display: flex;
       flex-direction: column;
       align-items: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
       border: 1px solid rgba(0,0,0,0.03);
     }
 
-    /* --- ขยายรูปให้ใหญ่ เห็นหน้าอาจารย์ชัดๆ --- */
+    /* ขยายรูปให้ใหญ่ขึ้นอีก 120px ในมือถือ เพื่อความชัด */
     .faculty-img {
-      width: 110px; 
-      height: 110px;
+      width: 120px; 
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 12px;
+      margin-bottom: 15px;
       border: 4px solid white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
 
-    /* ในคอมพิวเตอร์ขยายรูปขึ้นอีก */
     @media (min-width: 768px) {
-      .faculty-img { width: 140px; height: 140px; }
+      .faculty-img { width: 150px; height: 150px; }
     }
 
     .name {
-      font-size: 1rem; /* ตัวหนังสือใหญ่ขึ้นให้อ่านง่าย */
+      font-size: 1.05rem; 
       font-weight: 600; 
       color: #222;
-      margin-bottom: 4px;
-      line-height: 1.2;
+      margin-bottom: 5px;
+      line-height: 1.3;
     }
 
     .position {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: var(--primary-color);
-      margin-bottom: 8px;
-      height: 2.4em; /* ล็อกความสูงให้ชื่อตำแหน่งไม่กระโดด */
+      margin-bottom: 10px;
+      min-height: 2.5em;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     .sec-tag {
-      font-size: 0.75rem;
-      color: #fff;
-      background-color: var(--primary-color);
-      padding: 3px 12px;
-      border-radius: 20px; 
+      font-size: 0.8rem;
+      color: #666;
+      background-color: #f0f2f5;
+      padding: 4px 15px;
+      border-radius: 50px; 
       margin-top: auto;
-      font-weight: 300;
+      font-weight: 400;
     }
 
-    /* Hover effect สำหรับ Desktop */
     @media (hover: hover) {
       .faculty-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        border-color: var(--primary-color);
       }
     }
   </style>
@@ -128,48 +125,105 @@
 
   <div class="section-title">Leadership Team</div>
   <div class="faculty-grid">
+    
     <a href="maew.html" class="faculty-card">
       <img src="https://drive.google.com/thumbnail?id=13OP-FfyJqIX2a28FXoQT8G3t0YvJ45Ra&sz=w1000" class="faculty-img">
-      <div class="name">อ. แมว ปาริฉัตร</div>
-      <div class="position">Head of Voice</div>
+      <div class="name">อ. แมว-ปาริฉัตร อยู่ประเสริฐ</div>
+      <div class="position">Head of Voice Studies</div>
       <div class="sec-tag">Sec 22</div>
     </a>
+
     <a href="kloy.html" class="faculty-card">
       <img src="https://drive.google.com/thumbnail?id=1WZ-C4uPgZVbktozkUiDSM9BYyxsgJCFP&sz=w1000" class="faculty-img">
-      <div class="name">อ. กลอย ดลหทัย</div>
-      <div class="position">Director of Choral</div>
+      <div class="name">อ. กลอย-ดลหทัย อินทวงศ์, ดร.</div>
+      <div class="position">Director of Choral Studies</div>
       <div class="sec-tag">Sec 34</div>
     </a>
+
   </div>
 
   <div class="section-title">Voice Faculty</div>
   <div class="faculty-grid">
+
     <a href="fish.html" class="faculty-card">
       <img src="https://drive.google.com/thumbnail?id=1mrzYEYZ2iDcLugBFh3ZmUlZLe90uFURc&sz=w1000" class="faculty-img">
-      <div class="name">อ. ฟิช กฤตธัช</div>
+      <div class="name">อ. ฟิช-กฤตธัช พิสุทธิวงษ์</div>
       <div class="sec-tag">Sec 71</div>
     </a>
+
     <a href="pond.html" class="faculty-card">
       <img src="https://drive.google.com/thumbnail?id=1HZb43bFQ7ja_MUnqaRgopbQTCwT-yAXL&sz=w1000" class="faculty-img">
-      <div class="name">อ. ปอนด์ พัทธนันท์</div>
+      <div class="name">อ. ปอนด์-พัทธนันท์ อาจองค์</div>
       <div class="sec-tag">Sec 72</div>
     </a>
+
     <a href="dew.html" class="faculty-card">
       <img src="https://drive.google.com/thumbnail?id=1ZI9JPFzX3yNeJNzYrDoyI-A7t_MdH0a3&sz=w1000" class="faculty-img">
-      <div class="name">อ. ดิว ภัท</div>
+      <div class="name">อ. ดิว-ภัท ชัยวินิตย์</div>
       <div class="sec-tag">Sec 68</div>
     </a>
+
     <a href="lookpla.html" class="faculty-card">
       <img src="https://drive.google.com/thumbnail?id=1VW0bE2TgVgJP1EHNo-HAmjPAqPwribD8&sz=w1000" class="faculty-img">
-      <div class="name">อ. ลูกปลา อารียา</div>
+      <div class="name">อ. ลูกปลา-อารียา โรจนดิษฐ์</div>
       <div class="sec-tag">Sec 70</div>
     </a>
+
+    <a href="frame.html" class="faculty-card">
+      <img src="https://drive.google.com/thumbnail?id=13thLDXRlLDk4_VDCCOaOCPV9Tu-Mdmsl&sz=w1000" class="faculty-img">
+      <div class="name">อ. เฟรม-พงษ์พิษณุ พงษ์พยอม</div>
+      <div class="sec-tag">Sec 67</div>
+    </a>
+
+    <a href="friend.html" class="faculty-card">
+      <img src="https://drive.google.com/thumbnail?id=1_Sv7YVlYbmHk9_6KzSkEfwqxaeDURmHN&sz=w1000" class="faculty-img">
+      <div class="name">อ. เฟรน-ปฏิทัศน์ จันทนากร</div>
+      <div class="sec-tag">Sec 73</div>
+    </a>
+
+    <a href="gain.html" class="faculty-card">
+      <img src="https://drive.google.com/thumbnail?id=1mLY5OozjAiec0AKC2V1AikCfv8T4OWnk&sz=w1000" class="faculty-img">
+      <div class="name">อ. เกน-วรัท บุญวรานันฐ์</div>
+      <div class="sec-tag">Sec 65</div>
+    </a>
+
     <a href="ue.html" class="faculty-card">
       <img src="https://drive.google.com/thumbnail?id=1HNgais62J0Nrmwxqb-3mqki_e2MLDoZB&sz=w1000" class="faculty-img">
-      <div class="name">อ. อือ วิษุวัต</div>
+      <div class="name">อ. อือ-วิษุวัต เปรมปรี</div>
       <div class="sec-tag">Sec 64</div>
     </a>
-    </div>
+
+    <a href="mew.html" class="faculty-card">
+      <img src="https://drive.google.com/thumbnail?id=167bGY_flzGVHO1nsnqTdhmCyWxyY-kj6&sz=w1000" class="faculty-img">
+      <div class="name">อ. มิว-ณธายุ ศิริบรรจงศักดิ์</div>
+      <div class="sec-tag">Sec 69</div>
+    </a>
+
+    <a href="mut.html" class="faculty-card">
+      <img src="https://drive.google.com/thumbnail?id=11GmYpUjGQeoQ5jMqzQl98ub4y8CTP8He&sz=w1000" class="faculty-img">
+      <div class="name">อ. มัท-ปณิธาน ชัยอักษรเวช</div>
+      <div class="sec-tag">Sec 62</div>
+    </a>
+
+    <a href="dream.html" class="faculty-card">
+      <img src="https://drive.google.com/thumbnail?id=1pfrr0j0JzstQ_YZ3XxkeuVx5DDwaouda&sz=w1000" class="faculty-img">
+      <div class="name">อ. ดรีม-วริศรา เข็มทิศ</div>
+      <div class="sec-tag">Sec 61</div>
+    </a>
+
+    <a href="eye.html" class="faculty-card">
+      <img src="https://drive.google.com/thumbnail?id=1sm0V_p27Ji35LCG3BLQ3qfnTCqKWGwg6&sz=w1000" class="faculty-img">
+      <div class="name">อ. อาย-ศรสวรรค์ เกียรติสันติกุล</div>
+      <div class="sec-tag">Sec 66</div>
+    </a>
+
+    <a href="pim.html" class="faculty-card">
+      <img src="https://drive.google.com/thumbnail?id=1nO4HSh-rntTdybMdimh6-V1y3wCYK2WL&sz=w1000" class="faculty-img">
+      <div class="name">อ. พิม-ณิศวรา พาทพุทธิพงศ์</div>
+      <div class="sec-tag">Sec 63</div>
+    </a>
+
+  </div>
 </div>
 
 </body>
