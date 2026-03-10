@@ -1,0 +1,303 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+  :root {
+    --primary-color: #0056b3;
+    --text-color: #333;
+    --bg-gray: #f9fbfd;
+  }
+
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Kanit', sans-serif;
+    background-color: transparent;
+    color: var(--text-color);
+  }
+
+  .profile-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+
+  /* === Header Section === */
+  .header-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    border-bottom: 1px solid #eee;
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    background-color: #eee;
+  }
+
+  .header-info h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    color: var(--primary-color);
+    line-height: 1.2;
+  }
+
+  .header-info h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0 0 15px 0;
+    color: #555;
+  }
+
+  .sec-badge {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-right: 10px;
+  }
+  
+  .contact-link {
+    font-size: 0.9rem;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .contact-link:hover { color: var(--primary-color); }
+
+  /* === Content Layout === */
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 40px;
+    align-items: start;
+  }
+
+  .bio-column h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  /* Role Tagline */
+  .role-tagline {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    display: block;
+    padding: 10px 15px;
+    background-color: #f0f7ff;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 4px;
+    line-height: 1.5;
+  }
+
+  .bio-text p {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    text-align: left;
+  }
+
+  .bio-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+
+  .bio-list li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .bio-list li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+
+  strong {
+    font-weight: 500;
+  }
+
+  .footer-nav {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    background-color: #fafafa;
+  }
+
+  .back-btn {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .back-btn:hover { color: var(--primary-color); }
+
+  @media (max-width: 900px) {
+    .header-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .content-grid {
+      grid-template-columns: 1fr;
+      padding: 20px;
+      gap: 30px;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+    }
+  }
+</style>
+
+<div class="profile-wrapper">
+
+  <div class="header-section">
+    <img src="https://drive.google.com/thumbnail?id=11GmYpUjGQeoQ5jMqzQl98ub4y8CTP8He&sz=w1000" class="profile-pic">
+    
+    <div class="header-info">
+      <h1>อ. ปณิธาน ชัยอักษรเวช<br><span style="font-size:0.8em; color:#666;">Panithan Chaiarksornwech</span></h1>
+      <h2>Voice Faculty Member</h2>
+      <div style="margin-top:5px;">
+        <span class="sec-badge">Sec 62</span>
+        <a href="https://linktr.ee/mutmatthew" target="_blank" class="contact-link">linktr.ee/mutmatthew</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-grid">
+    
+    <div class="bio-column">
+      <h3>ประวัติ</h3>
+      
+      <div class="role-tagline">
+        ศิลปิน / นักร้อง / นักแต่งเพลง / โปรดิวเซอร์ / นักดนตรี(เล่นเครื่องดนตรีหลากหลายชนิด)
+      </div>
+
+      <div class="bio-text">
+        <p>
+          อาจารย์ปณิธาน ชัยอักษรเวช หรือที่รู้จักในนาม "Mut Matthew" เป็นศิลปิน นักร้อง และนักแต่งเพลงที่มีความสามารถรอบด้าน สำเร็จการศึกษาระดับปริญญาตรี สาขา Jazz Vocal จากวิทยาลัยดนตรี มหาวิทยาลัยรังสิต มีผลงานโดดเด่นทั้งในฐานะศิลปินเดี่ยวและสมาชิกวง "Rocketman" รวมถึงมีประสบการณ์แสดงในเทศกาลดนตรีระดับนานาชาติในหลายประเทศ นอกจากเบื้องหน้าแล้ว ยังเป็นผู้อยู่เบื้องหลังให้กับศิลปินมากมาย
+        </p>
+      </div>
+
+      <h3>การศึกษา</h3>
+      <ul class="bio-list">
+        <li>2015 - 2019: ปริญญาตรี (Bachelor's degree) สาขา Jazz Vocal (ทุนการศึกษาความสามารถพิเศษ) จากวิทยาลัยดนตรี มหาวิทยาลัยรังสิต</li>
+      </ul>
+
+      <h3>ผลงานและประสบการณ์</h3>
+      <p><strong>ผลงานระดับนานาชาติ</strong></p>
+      <ul class="bio-list">
+        <li>2024: ร่วมแสดงในงาน "NAKASU JAZZ" ณ เมืองฟุกุโอกะ ประเทศญี่ปุ่น และงาน "MUCON:2024" Music Showcase ณ กรุงโซล ประเทศเกาหลีใต้ (ในนามวง Rocketman)</li>
+        <li>2023: ร่วมแสดงในงาน "NEON OASIS FEST" ณ นิวไทเป ประเทศไต้หวัน และงาน "Monsoon Music Festival" ณ ฮานอย ประเทศเวียดนาม (ในนามวง Rocketman)</li>
+      </ul>
+
+      <p><strong>ผลงานเพลงและศิลปิน</strong></p>
+      <ul class="bio-list">
+        <li><strong>Solo Project:</strong> ปล่อยผลงานเดี่ยวในนาม "Mut Matthew" (2024) และได้รับคัดเลือกเล่น Opening act ให้กับคอนเสิร์ต H3F "Chalawan Caravan" และงาน Sofar Sounds Bangkok</li>
+        <li><strong>Band Project:</strong> ก่อตั้งวง Rocketman (สังกัด Rats Records) และปล่อยอัลบั้มเต็มชุดแรก "SUNSHOWER" ในปี 2023</li>
+        <li><strong>Music Production:</strong> แต่งทำนอง/เรียบเรียง/โปรดิวซ์ เพลง "โปรดมาเล่นคอนเสิร์ตที่ประเทศของฉัน" ศิลปิน Syd Vethaka (ค่าย Smallroom) และทำเพลงประกอบโครงการ Sansiri Sound Healing "Morning Energy"</li>
+      </ul>
+
+      <p><strong>งานเบื้องหลังและการขับร้อง</strong></p>
+      <ul class="bio-list">
+        <li><strong>H3F:</strong> รับหน้าที่ Chorus และ Vocal Producer ให้อัลบั้มของวง รวมถึงร่วมแสดงใน Live Session ต่างๆ</li>
+        <li><strong>Polycat:</strong> ร่วมแสดงเป็น Chorus และ Dancer ในคอนเสิร์ต "I Want You" (2019)</li>
+        <li><strong>Commercial:</strong> ลงเสียงร้องโฆษณา Mazda "ALL-NEW MAZDA CX-30" (2020)</li>
+        <li><strong>Backing Vocal:</strong> ร่วมงานกับศิลปิน James Alyn และ YENTED</li>
+      </ul>
+
+      <h3>รางวัลและการแสดงดนตรี</h3>
+      <ul class="bio-list">
+         <li><strong>รางวัล:</strong> Finalist Asia SongWriting Camp (MCT), Artizen (SANSIRI), Keep Walking Music Space, I Can See Your Voice Thailand และ 1 ใน 6 รางวัล Grand Prize จาก Lanna International Choir Competition ครั้งที่ 1</li>
+         <li><strong>การแสดงดนตรี:</strong> 2022-ปัจจุบัน (Black Cabin Bar, Knock Knock) และ 2015-2023 (Firefly, Marchwood, Home Ekkamai, Brown Sugar ฯลฯ)</li>
+      </ul>
+    </div>
+
+    <div class="bio-column">
+      <h3>Biography</h3>
+      
+      <div class="role-tagline">
+        Artist / Singer / Songwriter / Producer / Multi-instrumentalist
+      </div>
+
+      <div class="bio-text">
+        <p>
+          Panithan Chaiarksornwech, known as "Mut Matthew," is a versatile artist, singer, and songwriter. He holds a Bachelor's degree in Jazz Vocal from the Conservatory of Music, Rangsit University. He has distinguished himself both as a solo artist and as a member of the band "Rocketman," with international festival performance experience. He also works behind the scenes for numerous artists.
+        </p>
+      </div>
+
+      <h3>Education</h3>
+      <ul class="bio-list">
+        <li>2015 - 2019: Bachelor of Arts in Jazz Vocal (Full Scholarship), Conservatory of Music, Rangsit University.</li>
+      </ul>
+
+      <h3>Professional Experience</h3>
+      <p><strong>International Appearances</strong></p>
+      <ul class="bio-list">
+        <li>2024: Performed at "NAKASU JAZZ" (Fukuoka, Japan) and "MUCON:2024" Music Showcase (Seoul, South Korea) with Rocketman.</li>
+        <li>2023: Performed at "NEON OASIS FEST" (New Taipei, Taiwan) and "Monsoon Music Festival" (Hanoi, Vietnam) with Rocketman.</li>
+      </ul>
+
+      <p><strong>Music & Artist Projects</strong></p>
+      <ul class="bio-list">
+        <li><strong>Solo Project:</strong> Released "Mut Matthew" (2024); Opening act for H3F "Chalawan Caravan" and Sofar Sounds Bangkok.</li>
+        <li><strong>Band Project:</strong> Founded "Rocketman" (Rats Records) and released the album "SUNSHOWER" in 2023.</li>
+        <li><strong>Music Production:</strong> Composed/Arranged/Produced for Syd Vethaka (Smallroom) and Sansiri Sound Healing project "Morning Energy".</li>
+      </ul>
+
+      <p><strong>Backing Vocal / Chorus / Session</strong></p>
+      <ul class="bio-list">
+        <li><strong>H3F:</strong> Chorus and Vocal Producer for albums and Live Sessions.</li>
+        <li><strong>Polycat:</strong> Chorus and Dancer for "I Want You" Concert (2019).</li>
+        <li><strong>Commercial:</strong> Vocal recording for Mazda commercial "ALL-NEW MAZDA CX-30" (2020).</li>
+        <li><strong>Backing Vocal:</strong> Worked with James Alyn and YENTED.</li>
+      </ul>
+
+      <h3>Awards & Performance Experience</h3>
+      <ul class="bio-list">
+         <li><strong>Awards:</strong> Finalist in Asia SongWriting Camp (MCT), Artizen (SANSIRI), Keep Walking Music Space, I Can See Your Voice Thailand, and Grand Prize (Top 6) at Lanna International Choir Competition.</li>
+         <li><strong>Performance:</strong> 2022-Present (Black Cabin Bar, Knock Knock) and 2015-2023 (Firefly, Marchwood, Brown Sugar, Siwilai City Club, etc.).</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-nav">
+    <a href="https://sites.google.com/view/rsuvoicearea/faculty-list" class="back-btn">
+      ← Back to Faculty List
+    </a>
+  </div>
+
+</div>
