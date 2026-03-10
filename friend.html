@@ -1,0 +1,193 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+  :root {
+    --primary-color: #0056b3;
+    --text-color: #333;
+    --bg-gray: #f9fbfd;
+  }
+
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Kanit', sans-serif;
+    background-color: transparent;
+    color: var(--text-color);
+  }
+
+  .profile-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+
+  /* === Header Section === */
+  .header-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    border-bottom: 1px solid #eee;
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+  }
+
+  .header-info h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    color: var(--primary-color);
+    line-height: 1.2;
+  }
+
+  .header-info h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0 0 15px 0;
+    color: #555;
+  }
+
+  .sec-badge {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  /* === Content Layout === */
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* แบ่งครึ่งซ้ายขวา */
+    gap: 40px;
+    padding: 40px;
+    align-items: start;
+  }
+
+  .bio-column h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .bio-text p {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    text-align: left;
+  }
+
+  /* === Footer / Back Button === */
+  .footer-nav {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    background-color: #fafafa;
+  }
+
+  .back-btn {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .back-btn:hover { color: var(--primary-color); }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .content-grid {
+      grid-template-columns: 1fr;
+      padding: 20px;
+      gap: 30px;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+    }
+  }
+</style>
+
+<div class="profile-wrapper">
+
+  <div class="header-section">
+    <img src="https://drive.google.com/thumbnail?id=1_Sv7YVlYbmHk9_6KzSkEfwqxaeDURmHN&sz=w1000" class="profile-pic">
+    
+    <div class="header-info">
+      <h1>อ. เฟรน-ปฏิทัศน์ จันทนากร<br><span style="font-size:0.8em; color:#666;">Pathitat Chanthanakorn</span></h1>
+      <h2>Voice Faculty Member</h2>
+      <span class="sec-badge">Sec 73</span>
+    </div>
+  </div>
+
+  <div class="content-grid">
+    
+    <div class="bio-column">
+      <h3>ประวัติ</h3>
+      <div class="bio-text">
+        <p>
+          ปฏิทัศน์ จันทนากร สำเร็จการศึกษาระดับปริญญาตรี สาขาขับร้องละครเพลง จากมหาวิทยาลัยรังสิต และระดับปริญญาโท สาขาดุริยางคศิลป์ตะวันตก จากจุฬาลงกรณ์มหาวิทยาลัย
+        </p>
+        <p>
+          มีประสบการณ์การสอนขับร้องและเปียโนกว่า 9 ปี โดยมุ่งเน้นส่งเสริมผู้เรียนทุกวัยให้ประสบความสำเร็จ ทั้งในการสอบเข้ามหาวิทยาลัยชั้นนำ การประกวดแข่งขัน และการพัฒนาบุคลิกภาพ อีกทั้งยังได้รับเชิญเป็นวิทยากรพิเศษด้านการใช้เสียงให้แก่นักศึกษา คณะศึกษาศาสตร์ มหาวิทยาลัยศรีนครินทรวิโรฒ และได้รับทุนเป็นผู้ช่วยสอน (TA) วิชาประสานเสียง ที่คณะศิลปกรรมศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย
+        </p>
+        <p>
+          ด้านการขับร้องประสานเสียง ปฏิทัศน์เป็นสมาชิกวง RSU Concert Singers (ควบคุมวงโดย ดร.ดลหทัย อินทวงศ์) ซึ่งได้รับรางวัลชนะเลิศอันดับ 1 เหรียญทองประเภท Gospel & Spiritual ในการแข่งขัน 1st Lanna International Choir Competition 2016 และเป็นตัวแทนประเทศไทยแสดงในงาน Mekong River Basin National Culture and Arts Festival ณ สาธารณรัฐประชาชนจีน
+        </p>
+        <p>
+          <strong>ผลงานละครเพลง:</strong> ร่วมแสดงในละครเพลง “ม่านประเพณี ประกาศิตอาญาสวรรค์” (ร่วมแสดงกับพระเจ้าวรวงศ์เธอ พระองค์เจ้าโสมสวลี กรมหมื่นสุทธนารีนาถ) และรับบทนำใน “แกะดำโลกสวย เดอะมิวสิคัล” นอกจากนี้ยังได้ประพันธ์ดนตรี บทละครและแสดงในละครเพลงเรื่อง “After The Rain” ซึ่งเป็นผลงานจุลนิพนธ์อีกด้วย
+        </p>
+      </div>
+    </div>
+
+    <div class="bio-column">
+      <h3>Biography</h3>
+      <div class="bio-text">
+        <p>
+          Pathitat Chanthanakorn holds a Bachelor's degree in Musical Theatre from Rangsit University and a Master's degree in Western Music from Chulalongkorn University.
+        </p>
+        <p>
+          With over 9 years of experience teaching voice and piano, he has guided students of all ages to success in university entrance exams, competitions, and professional voice development. He has served as a guest lecturer on vocal health at the Faculty of Education, Srinakharinwirot University, and as a teaching assistant for the Choral Singing course at the Faculty of Fine and Applied Arts, Chulalongkorn University.
+        </p>
+        <p>
+          As a member of the RSU Concert Singers (directed by Dr. Dolhathai Intawong), the group won the 1st Prize Gold Medal in the Gospel & Spiritual category at the 1st Lanna International Choir Competition 2016 and represented Thailand at the Mekong River Basin National Culture and Arts Festival in China.
+        </p>
+        <p>
+          <strong>Musical Theatre Credits:</strong> He performed in "Marn Prapheni" (The Butterfly Lovers The Musical ) alongside HRH Princess Soamsawali, and played a leading role in "Black Sheep The Musical." He wrote and performed his own original musical, "After The Rain," as his senior thesis.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-nav">
+    <a href="https://sites.google.com/view/rsuvoicearea/faculty-list" class="back-btn">
+      ← Back to Faculty List
+    </a>
+  </div>
+
+</div>
