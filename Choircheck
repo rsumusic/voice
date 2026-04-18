@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Kanit', sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: transparent; /* พื้นหลังใสเพื่อให้กลืนกับ Google Site */
+        display: flex;
+        justify-content: center;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 400px;
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 16px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        text-align: center;
+        border: 1px solid #eee;
+      }
+
+      h2 {
+        margin-top: 0;
+        color: #4F46E5;
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+      
+      p {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 12px 0;
+        margin-bottom: 12px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        transition: all 0.2s ease;
+        box-sizing: border-box;
+        border: 1px solid transparent;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+
+      /* ปุ่ม Sec 11 & 12 (สีเขียว) */
+      .btn-choir {
+        background-color: #ecfdf5;
+        color: #059669;
+        border-color: #34d399;
+      }
+      .btn-choir:hover {
+        background-color: #10b981;
+        color: white;
+        border-color: transparent;
+      }
+
+      /* ปุ่ม Performance (สีชมพู) */
+      .btn-perf {
+        background-color: #fff1f2;
+        color: #db2777;
+        border-color: #f472b6;
+      }
+      .btn-perf:hover {
+        background-color: #db2777;
+        color: white;
+        border-color: transparent;
+      }
+
+      .divider {
+        margin: 15px 0;
+        border-top: 1px dashed #ddd;
+      }
+      
+      /* ปรับปรุง Icon เป็น SVG */
+      .btn svg {
+        margin-right: 8px;
+        width: 20px;
+        height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>ตรวจสอบสถานะการเข้าเรียน</h2>
+      <p>เลือกรายวิชาที่ต้องการตรวจสอบ</p>
+
+      <!-- ปุ่ม Sec 11 -->
+      <a href="https://script.google.com/macros/s/AKfycbyskoB3AM65r2oAGg7Iw8Th7eG5w-8veBxRLmUyGGniscSZNmkh69scpaMXo7Mjmwlh/exec?page=check_status" target="_blank" class="btn btn-choir">
+        <!-- SVG Icon: Search/Check -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        เช็คสถานะ CHORUS Sec 11
+      </a>
+
+      <!-- ปุ่ม Sec 12 -->
+      <a href="https://script.google.com/macros/s/AKfycbzH74v0YkKlqSuSpBlVtrC9hymvNs6D71rLlbEeAiLoQjduQhTfeWQ5zbwHtOVy6MFiaA/exec?page=check_status" target="_blank" class="btn btn-choir">
+        <!-- SVG Icon: Search/Check -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        เช็คสถานะ CHORUS Sec 12
+      </a>
+
+      <div class="divider"></div>
+
+      <!-- ปุ่ม Performance Class -->
+      <a href="https://script.google.com/macros/s/AKfycbwk0PWqgNbp3Y5Msd4Kgcwu2X_4sWulud0evX3AMU-WnU0GqCLKXqHdbf9Km-NoVktovg/exec?page=check_status" target="_blank" class="btn btn-perf">
+        <!-- SVG Icon: Music Note -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+        </svg>
+        Performance Class
+      </a>
+    </div>
+  </body>
+</html>
